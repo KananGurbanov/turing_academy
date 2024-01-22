@@ -8,20 +8,20 @@ public class GradeFounder {
         if ( grade >=91 && grade <= 100 ){
             System.out.println("A");
         }
-        else if(grade < 91 && grade >=81){
+        else if(grade >=81){
             System.out.println("B");
         }
-        else if(grade <81 && grade >=71){
+        else if(grade >=71){
             System.out.println("C");
         }
-        else if(grade <71 && grade >=61){
+        else if(grade >=61){
             System.out.println("D");
         }
 
-        else if(grade <61 && grade >=51){
+        else if( grade >=51){
             System.out.println("E");
         }
-        else if (grade >=0 && grade <51){
+        else if (grade >=0 ){
             System.out.println("F");
         }
         else{
