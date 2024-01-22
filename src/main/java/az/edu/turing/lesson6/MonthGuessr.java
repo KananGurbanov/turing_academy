@@ -7,28 +7,11 @@ public class MonthGuessr {
     public static void main(String[] args){
         int month = new Scanner(System.in).nextInt();
 
-        if (month >12 || month<1){
-            System.out.println("Wrong Input!!!");
+        String [] months = {"January", "February" , "March" , "April" , "May", "June",
+        "July", "August", "September", "October" , "November" , "December"};
 
-        }
+        System.out.println(months[month-1]);
 
-        else{
-            if ( month >=2 && month <= 5) {
-                System.out.println("Spring");
-            }
-
-            else if ( month >= 6 && month <= 8) {
-                    System.out.println();
-            }
-            else if ( month >= 9 && month <=11) {
-                System.out.println("Fall");
-            }
-
-            else {
-                System.out.println("Winter");
-            }
-
-        }
 
 
     }
