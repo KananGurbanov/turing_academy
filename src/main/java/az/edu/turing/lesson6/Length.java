@@ -1,3 +1,5 @@
+package az.edu.turing.lesson6;
+
 import java.util.Scanner;
 
 public class Length {

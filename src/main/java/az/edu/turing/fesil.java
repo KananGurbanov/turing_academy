@@ -1,3 +1,5 @@
+package az.edu.turing;
+
 import java.util.Scanner;
 
 public class fesil {
