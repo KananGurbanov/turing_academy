@@ -5,7 +5,7 @@ public class GradeFounder {
     public static void  main(String[] args){
         double grade = new Scanner(System.in).nextDouble();
 
-        if ( grade >=91 ){
+        if ( grade >=91 && grade <= 100 ){
             System.out.println("A");
         }
         else if(grade < 91 && grade >=81){
@@ -21,8 +21,11 @@ public class GradeFounder {
         else if(grade <61 && grade >=51){
             System.out.println("E");
         }
-        else{
+        else if (grade >=0 && grade <51){
             System.out.println("F");
+        }
+        else{
+            System.out.println("Wrong Number");
         }
     }
 
