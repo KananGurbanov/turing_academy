@@ -18,6 +18,7 @@ public class RandomNamePlace {
     }
 
     public static void shuffleNames(String[] names) {
+
         Random rand = new Random();
 
 
