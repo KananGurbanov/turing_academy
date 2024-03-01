@@ -5,8 +5,11 @@ import java.util.Scanner;
 public class TestApp {
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
+
         String str = s.next();
+
         func(str);
+
     }
 
     public static void func(String str){
