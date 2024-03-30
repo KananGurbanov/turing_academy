@@ -8,4 +8,5 @@ public enum DayofWeek {
     FRIDAY,
     SATURDAY,
     SUNDAY;
+
 }

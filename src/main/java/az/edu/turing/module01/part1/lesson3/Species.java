@@ -4,6 +4,7 @@ public enum Species {
 
     BULLDOG,
     HUSKI,
-    QAFQAZCOBANITI;
+    QAFQAZCOBANITI,
+    UNKNOWN;
 
 }
