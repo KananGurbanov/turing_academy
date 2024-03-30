@@ -2,7 +2,7 @@ package az.edu.turing.module01.part1.lesson3;
 
 import java.util.Arrays;
 
-public class Pet {
+public  class Pet {
 
     private Species species;
 
@@ -99,7 +99,7 @@ public class Pet {
 
     @Override
     public String toString() {
-        return "Pet{" +
+        return "Pe{" +
                 "species='" + species + '\'' +
                 ", nickname='" + nickname + '\'' +
                 ", age=" + age +
