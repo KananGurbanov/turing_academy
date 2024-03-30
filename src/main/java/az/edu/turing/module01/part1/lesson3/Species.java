@@ -5,6 +5,18 @@ public enum Species {
     BULLDOG,
     HUSKI,
     QAFQAZCOBANITI,
-    UNKNOWN;
+    UNKNOWN,
+
+    SAZAN,
+
+    FOREL,
+
+    AKULA,
+
+    DELFIN,
+
+    KITTEN,
+
+    AUTOCAT;
 
 }

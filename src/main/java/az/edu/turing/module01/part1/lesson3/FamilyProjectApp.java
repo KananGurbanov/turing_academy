@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class FamilyProjectApp {
     public static void main(String[] args) {
-        Dog dog1 = new Dog(Species.QAFQAZCOBANITI, "ravi");
+        Fish fish1 = new Fish(Species.AKULA, "ravi");
         Human mother1 = new Human("Jeremy","Blat",1940);
         Human father1 = new Human("Yazil","Seferov",1939);
         Human child1 = new Human("Mike","Tyson",1966,100,new String[][] {});
@@ -12,7 +12,7 @@ public class FamilyProjectApp {
         Human child3 = new Human("M5ke","Tys5n",1366,100,new String[][] {});
 
 
-        Family f1 = new Family(mother1,father1,new Human[] {child1,child2},dog1);
+        Family f1 = new Family(mother1,father1,new Human[] {child1,child2},fish1);
 
         System.out.println(f1);
 
@@ -27,7 +27,7 @@ public class FamilyProjectApp {
         System.out.println(f1.getChildren());
 
 
-        System.out.println(dog1);
+        System.out.println(fish1);
         System.out.println(mother1);
         System.out.println(father1);
         System.out.println(child1);
