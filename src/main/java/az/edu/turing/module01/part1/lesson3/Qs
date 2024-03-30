@@ -1,0 +1,9 @@
+What is refactoring of describe and feed pet methods??
+
+How to implement finalize method in all classes??
+
+How to implement addchild, deletechild, countfamily methods???
+
+Methods should not only add/remove items to the Human array,
+but also make the necessary modifications (to the added/removed item to set/remove the link to the current family).
+When deleting an item, there should be no empty spaces in the array - a new array should be created. What does this mean?
