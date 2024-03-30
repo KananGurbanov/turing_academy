@@ -1,4 +1,4 @@
-package az.edu.turing.lesson6;
+package az.edu.turing.module00.lesson6;
 
 import java.util.Scanner;
 

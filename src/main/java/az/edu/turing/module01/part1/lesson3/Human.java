@@ -1,6 +1,7 @@
-package az.edu.turing.module01.lesson3;
+package az.edu.turing.module01.part1.lesson3;
 
 import java.util.Arrays;
+import java.util.Objects;
 
 public class Human {
 
@@ -12,13 +13,21 @@ public class Human {
 
     private int iq;
 
-    private Pet pet;
-
-    private Human mother;
-
-    private Human father;
+    private Family family;
 
     private String[][] schedule;
+
+
+
+    public Family getFamily() {
+        return family;
+    }
+
+    public void setFamily(Family family) {
+        this.family = family;
+    }
+
+
 
     public Human(String name, String surname, int year) {
         this.name = name;
@@ -26,22 +35,23 @@ public class Human {
         this.year = year;
     }
 
-    public Human(String name, String surname, int year, Human mother, Human father) {
-        this.name = name;
-        this.surname = surname;
-        this.year = year;
-        this.mother = mother;
-        this.father = father;
-    }
 
-    public Human(String name, String surname, int year, int iq, Pet pet, Human mother, Human father, String[][] schedule) {
+
+    public Human(String name, String surname, int year, int iq, String[][] schedule) {
         this.name = name;
         this.surname = surname;
         this.year = year;
         this.iq = iq;
-        this.pet = pet;
-        this.mother = mother;
-        this.father = father;
+
+        this.schedule = schedule;
+    }
+
+    public Human(String name, String surname, int year, int iq, Family family, String[][] schedule) {
+        this.name = name;
+        this.surname = surname;
+        this.year = year;
+        this.iq = iq;
+        this.family = family;
         this.schedule = schedule;
     }
 
@@ -87,59 +97,40 @@ public class Human {
         this.schedule = schedule;
     }
 
-    public Pet getPet() {
-        return pet;
-    }
 
-    public void setPet(Pet pet) {
-        this.pet = pet;
-    }
-
-    public Human getMother() {
-        return mother;
-    }
-
-    public void setMother(Human mother) {
-        this.mother = mother;
-    }
-
-    public Human getFather() {
-        return father;
-    }
-
-    public void setFather(Human father) {
-        this.father = father;
-    }
 
     public void greetPet(){
         System.out.println("Hello, " + this.name);
     }
 
     public void describePet(){
-        System.out.println("I have an " + pet.getSpecies() + " is " + pet.getAge() + " years old ");
+        System.out.println("I have an " + " is "  + " years old ");
     }
 
-    @Override
-    public int hashCode() {
-        return super.hashCode();
-    }
 
     @Override
-    public boolean equals(Object obj) {
-        return super.equals(obj);
-    }
-
-    @Override
-    public String toString() {
+    public String  toString() {
         return "Human{" +
                 "name='" + name + '\'' +
                 ", surname='" + surname + '\'' +
                 ", year=" + year +
                 ", iq=" + iq +
-                ", pet=" + pet +
-                ", mother=" + mother +
-                ", father=" + father +
                 ", schedule=" + Arrays.toString(schedule) +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Human human = (Human) o;
+        return year == human.year && iq == human.iq && Objects.equals(name, human.name) && Objects.equals(surname, human.surname) && Objects.equals(family, human.family) && Arrays.equals(schedule, human.schedule);
+    }
+
+    @Override
+    public int hashCode() {
+        int result = Objects.hash(name, surname, year, iq, family);
+        result = 31 * result + Arrays.hashCode(schedule);
+        return result;
     }
 }
