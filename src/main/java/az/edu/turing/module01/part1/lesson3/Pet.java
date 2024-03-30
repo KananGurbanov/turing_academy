@@ -2,9 +2,9 @@ package az.edu.turing.module01.part1.lesson3;
 
 import java.util.Arrays;
 
-public  class Pet {
+public abstract class Pet {
 
-    private Species species;
+    private Species species = Species.UNKNOWN;
 
     private String nickname;
 
@@ -79,9 +79,7 @@ public  class Pet {
 
 
 
-    public void respond(){
-        System.out.println("Hello, owner. I am - " + this.nickname + ".I miss you!");
-    }
+    public abstract void respond();
 
     public void foul(){
         System.out.println("I need to cover it up");

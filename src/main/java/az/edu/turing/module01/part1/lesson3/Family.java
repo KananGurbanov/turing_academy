@@ -66,7 +66,10 @@ public class Family {
             }
             else{
                 n[i] = children[i+1];
+                children[i+1] = null;
+
             }
+
 
         }
 
