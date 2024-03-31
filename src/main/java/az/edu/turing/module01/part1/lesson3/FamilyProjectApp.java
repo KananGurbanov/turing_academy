@@ -10,9 +10,11 @@ public class FamilyProjectApp {
         Human child1 = new Human("Mike","Tyson",1966,100,new String[][] {});
         Human child2 = new Human("M3ke","Tysfn",1466,100,new String[][] {});
         Human child3 = new Human("M5ke","Tys5n",1366,100,new String[][] {});
+        Human child4 = new Human("M7ke","Tys7n",1766,10,new String[][] {});
 
 
-        Family f1 = new Family(mother1,father1,new Human[] {child1,child2},fish1);
+
+        Family f1 = new Family(mother1,father1,new Human[] {child1,child2,child4},fish1);
 
         System.out.println(f1);
 
