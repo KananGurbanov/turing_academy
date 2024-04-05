@@ -8,9 +8,9 @@ public final class Player implements Comparable< Player>{
 
     public int score;
 
-    public Player(String name, int score) {
-        this.name = name;
-        this.score = score;
+    public Player(String Name, int Score) {
+        name = Name;
+        score = Score;
     }
 
     @Override
@@ -36,7 +36,7 @@ public final class Player implements Comparable< Player>{
 
     @Override
     public int compareTo(Player o) {
-        return this.score < o.score ? 1 : this.score>o.score ? -1 : this.name.compareTo(o.name);
+        return score > o.score ? 1 : score < o.score ? -1 : name.compareTo(o.name);
     }
 
 

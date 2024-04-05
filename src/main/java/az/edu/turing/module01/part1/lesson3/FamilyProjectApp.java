@@ -18,15 +18,15 @@ public class FamilyProjectApp {
 
         System.out.println(f1);
 
-        System.out.println(f1.getChildren());
+        System.out.println(Arrays.toString(f1.getChildren()));
 
         f1.addchild(child3);
 
-        System.out.println(f1.getChildren());
+        System.out.println(Arrays.toString(f1.getChildren()));
 
         f1.deleteChild(1);
 
-        System.out.println(f1.getChildren());
+        System.out.println(Arrays.toString(f1.getChildren()));
 
 
         System.out.println(fish1);

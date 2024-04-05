@@ -40,8 +40,8 @@ public class Family {
         this.father = father;
     }
 
-    public String getChildren() {
-        return Arrays.toString(children);
+    public Human[] getChildren() {
+        return children;
     }
 
     public void setChildren(Human[] children) {
@@ -56,24 +56,24 @@ public class Family {
         this.pet = pet;
     }
 
-    public boolean deleteChild(int index){
+    public boolean deleteChild (int index){
 
-        Human [] n = new Human [children.length - 1];
+        Human [] n = new Human [this.children.length - 1];
 
-        for (int i = 0; i< children.length - 1;i++){
+        for (int i = 0; i< this.children.length - 1;i++){
             if(i<index){
-                n[i] = children[i];
+                n[i] = this.children[i];
             }
             else{
-                n[i] = children[i+1];
-                children[i+1] = null;
+                n[i] = this.children[i+1];
+                this.children[i+1] = null;
 
             }
 
 
         }
 
-        children = n;
+        this.children = n;
 
         return true;
     }
@@ -82,15 +82,15 @@ public class Family {
 
         boolean flag = true;
 
-        for (int i = 0; i<children.length;i++){
-            if(children[i].hashCode()== child.hashCode()){
+        for (int i = 0; i<this.children.length;i++){
+            if(this.children[i].hashCode()== child.hashCode()){
                 flag = false;
                 System.out.println("Already exist in the array");
             }
         }
 
         if (flag){
-            Human [] n = new Human [children.length + 1];
+            Human [] n = new Human [this.children.length + 1];
 
             for (int i = 0; i< children.length;i++){
                 n[i] = children[i];
