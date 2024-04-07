@@ -1,6 +1,6 @@
-package az.edu.turing.module01.part1.lesson3;
+package az.edu.turing.module01.part1.lesson3.HappyFamilyProject;
 
-public class DomesticCat extends Pet{
+public class DomesticCat extends Pet {
 
     public DomesticCat(Species species, String nickname) {
         super(species, nickname);

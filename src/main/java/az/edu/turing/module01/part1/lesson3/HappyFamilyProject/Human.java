@@ -1,9 +1,9 @@
-package az.edu.turing.module01.part1.lesson3;
+package az.edu.turing.module01.part1.lesson3.HappyFamilyProject;
 
 import java.util.Arrays;
 import java.util.Objects;
 
-public class Human {
+public class Human implements HumanCreator {
 
     private String name;
 
@@ -132,5 +132,10 @@ public class Human {
         int result = Objects.hash(name, surname, year, iq, family);
         result = 31 * result + Arrays.hashCode(schedule);
         return result;
+    }
+
+    @Override
+    public void bornChild() {
+        return;
     }
 }

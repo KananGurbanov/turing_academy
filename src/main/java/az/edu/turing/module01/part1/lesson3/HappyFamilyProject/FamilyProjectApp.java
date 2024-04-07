@@ -1,10 +1,10 @@
-package az.edu.turing.module01.part1.lesson3;
+package az.edu.turing.module01.part1.lesson3.HappyFamilyProject;
 
 import java.util.Arrays;
 
 public class FamilyProjectApp {
     public static void main(String[] args) {
-        Fish fish1 = new Fish(Species.AKULA, "ravi");
+        Pet fish1 = new Fish(Species.AKULA, "ravi");
         Human mother1 = new Human("Jeremy","Blat",1940);
         Human father1 = new Human("Yazil","Seferov",1939);
         Human child1 = new Human("Mike","Tyson",1966,100,new String[][] {});

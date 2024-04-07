@@ -8,9 +8,12 @@ public final class Player implements Comparable< Player>{
 
     public int score;
 
-    public Player(String Name, int Score) {
+    public int id;
+
+    public Player(String Name, int Score, int id) {
         name = Name;
         score = Score;
+        this.id = id;
     }
 
     @Override
