@@ -7,6 +7,7 @@ public class SwitchCase {
         switch (x){
             case 8:
                 System.out.println("hello");
+                break;
 
 
             case 5,6:
@@ -14,6 +15,7 @@ public class SwitchCase {
 
             case 7:
                 System.out.println("Halo");
+                break;
             default:
                 System.out.println("heloo");
         }
@@ -37,7 +39,7 @@ public class SwitchCase {
         //switch expression
         String helloType = switch (x){
             case 8 -> "Halloo";
-            case 5 ->"hello";
+            case 6 ->"hello";
             default -> "no greeting";
 
         };

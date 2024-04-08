@@ -134,8 +134,9 @@ public class Human implements HumanCreator {
         return result;
     }
 
+
     @Override
     public void bornChild() {
-        return;
+        System.out.println(HumanCreator.NUM);
     }
 }
