@@ -14,7 +14,7 @@ public class FamilyProjectApp {
 
 
 
-        Family f1 = new Family(mother1,father1,new Human[] {child1,child2,child4},fish1);
+        Family f1 = new Family(mother1,father1, new Human[]{child1, child2, child4}, fish1);
 
         System.out.println(f1);
 

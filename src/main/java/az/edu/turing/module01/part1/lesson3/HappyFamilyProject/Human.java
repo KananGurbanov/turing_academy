@@ -137,6 +137,13 @@ public class Human implements HumanCreator {
 
     @Override
     public void bornChild() {
-        System.out.println(HumanCreator.NUM);
+        System.out.println(HumanCreator.PIN);
     }
+
+    @Override
+    public void func() {
+        HumanCreator.super.func();
+    }
+
+
 }

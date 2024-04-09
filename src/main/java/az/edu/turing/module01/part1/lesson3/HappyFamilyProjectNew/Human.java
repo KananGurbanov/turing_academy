@@ -1,8 +1,10 @@
 package az.edu.turing.module01.part1.lesson3.HappyFamilyProjectNew;
 
+import az.edu.turing.module01.part1.lesson3.HappyFamilyProject.HumanCreator;
+
 import java.util.Arrays;
 
-public class Human {
+public class Human implements HumanCreator {
     private String name;
 
     private String surname;
@@ -134,4 +136,15 @@ public class Human {
         System.out.println("I have an " + pet.getSpecies() + ". It is " + pet.getAge() + ". ");
     }
 
+    @Override
+    public void bornChild() {
+
+    }
+
+    @Override
+    public void func() {
+        HumanCreator.super.func();
+
+        System.out.println("Hello");
+    }
 }
