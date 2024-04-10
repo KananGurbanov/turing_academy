@@ -1,41 +1,47 @@
 package az.edu.turing.MyApps.BankingApplication;
 
+import java.util.ArrayList;
+
 public class Human {
-
-    public boolean haveDebitCard;
-
-    private DebitCard card;
 
     private String nickName;
 
     private int age;
 
-    private int deposit;
+    private ArrayList<BankAccount> bankAccounts = new ArrayList<>();
 
-    public DebitCard getCard() {
-        return card;
-    }
+    private ArrayList<DebitCard> cards = new ArrayList<>();
 
-    public void setCard(DebitCard card) {
-        this.card = card;
-    }
+    public boolean haveDebitCard;
 
-    public Human(String nickName, int age, int deposit) {
+    public boolean havebankAccount;
+
+    public Human(String nickName, int age) {
         this.nickName = nickName;
         this.age = age;
-        this.deposit = deposit;
+        this.havebankAccount = false;
         this.haveDebitCard = false;
-        this.card = null;
-
     }
 
-    public Human(int cardAmount, String nickName, int age, int deposit) {
-        this.setCard(new DebitCard());
-        this.card.setAmount(cardAmount);
+    public Human(String nickName, int age, BankAccount account) {
         this.nickName = nickName;
         this.age = age;
-        this.deposit = deposit;
-        this.haveDebitCard = true;
+        this.bankAccounts.add(account);
+        this.haveDebitCard = false;
+    }
+
+    public Human(String nickName, int age, DebitCard card) {
+        this.nickName = nickName;
+        this.age = age;
+        this.havebankAccount = false;
+        this.cards.add(card);
+    }
+
+    public Human(String nickName, int age, DebitCard card, BankAccount account) {
+        this.nickName = nickName;
+        this.age = age;
+        this.bankAccounts.add(account);
+        this.cards.add(card);
     }
 
     public String getNickName() {
@@ -54,23 +60,31 @@ public class Human {
         this.age = age;
     }
 
-    public int getDeposit() {
-        return deposit;
+    public ArrayList<BankAccount> getBankAccounts() {
+        return bankAccounts;
     }
 
-    public void setDeposit(int deposit) {
-        this.deposit = deposit;
+    public void setBankAccounts(ArrayList<BankAccount> bankAccounts) {
+        this.bankAccounts = bankAccounts;
     }
 
+    public ArrayList<DebitCard> getCards() {
+        return cards;
+    }
 
+    public void setCards(ArrayList<DebitCard> cards) {
+        this.cards = cards;
+    }
 
     @Override
     public String toString() {
         return "Human{" +
                 "nickName='" + nickName + '\'' +
                 ", age=" + age +
+                ", bankAccounts=" + bankAccounts +
+                ", cards=" + cards +
+                ", haveDebitCard=" + haveDebitCard +
+                ", havebankAccount=" + havebankAccount +
                 '}';
     }
-
-
 }

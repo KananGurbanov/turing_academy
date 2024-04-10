@@ -1,5 +1,9 @@
 package az.edu.turing.MyApps.BankingApplication;
 
 public interface CardDepartament {
-    void giveDebitCard(Human human);
+    static void giveDebitCard(Human human){
+        human.getCards().add(new DebitCard());
+
+
+    }
 }

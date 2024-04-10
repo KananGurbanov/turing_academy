@@ -4,21 +4,21 @@ public class BankApp {
     public static void main(String[] args) {
         Bank bank = new Bank();
 
-        Human kanan = new Human(100,"Coteen", 19, 200);
+        Human kanan = new Human("Coteen",19,new BankAccount(100));
 
-        bank.newCustomer(kanan);
+        bank.newAccount(kanan);
 
-        System.out.println(Bank.numCustomers);
+        System.out.println(Bank.numAccounts);
 
-        bank.giveLoan(kanan, 100);
+        CardDepartament.giveDebitCard(kanan);
 
-        System.out.println(kanan.getDeposit());
+        LoanDepartment.giveLoan(kanan, kanan.getBankAccounts().get(0), 200);
 
-        bank.giveDebitCard(kanan);
+        System.out.println(kanan.getCards());
 
-        kanan.getCard().addAmount(300);
+        System.out.println(kanan.getBankAccounts());
 
-        System.out.println(kanan.getCard().getAmount());
+
 
     }
 }

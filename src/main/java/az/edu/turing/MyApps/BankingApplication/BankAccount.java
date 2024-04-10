@@ -1,34 +1,31 @@
 package az.edu.turing.MyApps.BankingApplication;
 
-public class DebitCard {
-    public static final int CAPACITY = 2000;
-
+public class BankAccount {
     private int balance;
 
     public int loan;
 
-    public DebitCard(int amount) {
-        this.balance = amount;
+    public BankAccount(int balance) {
+        this.balance = balance;
     }
 
-    public DebitCard() {
+    public BankAccount() {
         this.balance = 0;
     }
 
-    public int getAmount() {
+
+    public int getBalance() {
         return balance;
     }
 
 
-
-    public void addAmount(int amount){
-
+    public void addBalance(int amount){
         this.balance += amount;
     }
 
     @Override
     public String toString() {
-        return "DebitCard{" +
+        return "BankAccount{" +
                 "balance=" + balance +
                 ", loan=" + loan +
                 '}';
