@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 public class PlayerApp {
 
-    public static void main(String[] args) {
+    public static void mainV1(String[] args) {
 
 
 
@@ -33,7 +33,7 @@ public class PlayerApp {
 
     }
 
-    public static void mainV2(String[] args) {
+    public static void main(String[] args) {
         Player[] players = new Player[]{
                 new Player("amy", 100,1),
                 new Player("david", 100,2),
@@ -47,12 +47,12 @@ public class PlayerApp {
 
 
 
-        Arrays.sort(players, new Comparator<Player>(){
-            @Override
-            public int compare(Player o1, Player o2) {
-                return o1.id - o2.id;
-            }
-        });
+//        Arrays.sort(players, new Comparator<Player>(){
+//            @Override
+//            public int compare(Player o1, Player o2) {
+//                return o1.id - o2.id;
+//            }
+//        });
 
 
         Arrays.sort(players, (p1,p2) -> (p1.id - p2.id));

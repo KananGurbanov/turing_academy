@@ -34,6 +34,6 @@ public class FamilyProjectApp {
         System.out.println(father1);
         System.out.println(child1);
 
-        HumanCreator.foo();
+
     }
 }

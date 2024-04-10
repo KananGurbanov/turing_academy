@@ -6,12 +6,14 @@ public interface HumanCreator {
 
     void bornChild();
 
+    default void func(){
+        System.out.println("Smith");
+    }
+
     static void foo(){
         System.out.println("123");
     }
 
-    default void func(){
-        System.out.println("Smith");
-    }
+
 
 }

@@ -1,7 +1,5 @@
 package az.edu.turing.module01.part1.lesson8;
-
 public interface SportsHuman {
-
     String GYMNAME = "FITNESS";
 
     void workout();
