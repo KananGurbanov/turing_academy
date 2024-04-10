@@ -12,9 +12,9 @@ public class Human {
 
     private ArrayList<DebitCard> cards = new ArrayList<>();
 
-    public boolean haveDebitCard;
+    public boolean haveDebitCard = true;
 
-    public boolean havebankAccount;
+    public boolean havebankAccount = true;
 
     public Human(String nickName, int age) {
         this.nickName = nickName;
@@ -28,6 +28,7 @@ public class Human {
         this.age = age;
         this.bankAccounts.add(account);
         this.haveDebitCard = false;
+        Bank.numAccounts++;
     }
 
     public Human(String nickName, int age, DebitCard card) {
@@ -42,6 +43,7 @@ public class Human {
         this.age = age;
         this.bankAccounts.add(account);
         this.cards.add(card);
+        Bank.numAccounts++;
     }
 
     public String getNickName() {
