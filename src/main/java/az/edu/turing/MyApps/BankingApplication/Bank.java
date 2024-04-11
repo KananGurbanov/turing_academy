@@ -2,7 +2,7 @@ package az.edu.turing.MyApps.BankingApplication;
 
 import java.util.ArrayList;
 
-public class Bank implements LoanDepartment, CardDepartament {
+public class Bank implements LoanDepartment, CardDepartment {
 
     public static int numAccounts = 0;
     public static ArrayList<Human> customerList = new ArrayList<>();

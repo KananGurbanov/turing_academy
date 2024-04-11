@@ -1,4 +1,4 @@
-package az.edu.turing.module01.part1.lesson3.HappyFamilyProject;
+package az.edu.turing.module01.part1.lesson3;
 
 public class DomesticCat extends Pet {
 

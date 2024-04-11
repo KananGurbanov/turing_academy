@@ -1,9 +1,12 @@
-package az.edu.turing.module01.part1.lesson3.HappyFamilyProjectNew;
+package az.edu.turing.MyApps.HappyFamilyProjectNew;
+
+import az.edu.turing.module01.part1.lesson3.Species;
 
 import java.util.Arrays;
+import java.util.Set;
 
 public class Pet {
-    private String species;
+    private Species species;
 
     private String nickname;
 
@@ -11,14 +14,13 @@ public class Pet {
 
     private int trickLevel;
 
-    private String[][] habits;
+    private Set<String> habits;
 
     public Pet(String nickname) {
         this.nickname = nickname;
     }
 
-    public Pet(String species, String nickname, int age, int trickLevel, String[][] habits) {
-        this.species = species;
+    public Pet( String nickname, int age, int trickLevel, Set<String> habits) {
         this.nickname = nickname;
         this.age = age;
         this.trickLevel = trickLevel;
@@ -27,11 +29,11 @@ public class Pet {
 
     public Pet() {}
 
-    public String getSpecies() {
+    public Species getSpecies() {
         return species;
     }
 
-    public void setSpecies(String species) {
+    public void setSpecies(Species species) {
         this.species = species;
     }
 
@@ -59,11 +61,11 @@ public class Pet {
         this.trickLevel = trickLevel;
     }
 
-    public String[][] getHabits() {
+    public Set<String> getHabits() {
         return habits;
     }
 
-    public void setHabits(String[][] habits) {
+    public void setHabits(Set<String> habits) {
         this.habits = habits;
     }
 
@@ -74,7 +76,7 @@ public class Pet {
                 ", nickname='" + nickname + '\'' +
                 ", age=" + age +
                 ", trickLevel=" + trickLevel +
-                ", habits=" + Arrays.toString(habits) +
+                ", habits=" + habits +
                 '}';
     }
 

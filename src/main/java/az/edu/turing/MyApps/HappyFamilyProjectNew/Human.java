@@ -1,10 +1,13 @@
-package az.edu.turing.module01.part1.lesson3.HappyFamilyProjectNew;
+package az.edu.turing.MyApps.HappyFamilyProjectNew;
 
-import az.edu.turing.module01.part1.lesson3.HappyFamilyProject.HumanCreator;
+import az.edu.turing.module01.part1.lesson3.DayofWeek;
+import az.edu.turing.module01.part1.lesson3.Species;
 
 import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
 
-public class Human implements HumanCreator {
+public class Human {
     private String name;
 
     private String surname;
@@ -19,7 +22,7 @@ public class Human implements HumanCreator {
 
     private Human father;
 
-    private String[][] schedule;
+    private Map<DayofWeek, String> schedule;
 
 
     public Human(String name, String surname, int year) {
@@ -36,7 +39,7 @@ public class Human implements HumanCreator {
         this.father = father;
     }
 
-    public Human(String name, String surname, int year, int iq, Pet pet, Human mother, Human father, String[][] schedule) {
+    public Human(String name, String surname, int year, int iq, Pet pet, Human mother, Human father, Map <DayofWeek, String> schedule) {
         this.name = name;
         this.surname = surname;
         this.year = year;
@@ -105,26 +108,13 @@ public class Human implements HumanCreator {
         this.father = father;
     }
 
-    public String[][] getSchedule() {
+
+    public Map<DayofWeek, String> getSchedule() {
         return schedule;
     }
 
-    public void setSchedule(String[][] schedule) {
+    public void setSchedule(Map<DayofWeek, String> schedule) {
         this.schedule = schedule;
-    }
-
-    @Override
-    public String toString() {
-        return "Human{" +
-                "name='" + name + '\'' +
-                ", surname='" + surname + '\'' +
-                ", year=" + year +
-                ", iq=" + iq +
-                ", pet=" + pet +
-                ", mother=" + mother +
-                ", father=" + father +
-                ", schedule=" + Arrays.toString(schedule) +
-                '}';
     }
 
     public void greetPet(){
@@ -136,15 +126,7 @@ public class Human implements HumanCreator {
         System.out.println("I have an " + pet.getSpecies() + ". It is " + pet.getAge() + ". ");
     }
 
-    @Override
-    public void bornChild() {
 
-    }
 
-    @Override
-    public void func() {
-        HumanCreator.super.func();
 
-        System.out.println("Hello");
-    }
 }

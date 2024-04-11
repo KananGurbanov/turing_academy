@@ -1,6 +1,4 @@
-package az.edu.turing.module01.part1.lesson3.HappyFamilyProject;
-
-import az.edu.turing.module01.part1.lesson3.HappyFamilyProject.Human;
+package az.edu.turing.module01.part1.lesson3;
 
 public class Woman extends Human {
     @Override

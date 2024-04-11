@@ -6,16 +6,13 @@ public class BankApp {
 
         Human kanan = new Human("Coteen",19,new DebitCard(100),new BankAccount(150));
 
-
-
         System.out.println(Bank.numAccounts);
 
-        CardDepartament.giveDebitCard(kanan);
+        CardDepartment.giveDebitCard(kanan);
 
         LoanDepartment.giveLoan(kanan, kanan.getBankAccounts().get(0), 200);
 
-        CardDepartament.giveDebitCard(kanan);
-
+        CardDepartment.giveDebitCard(kanan);
 
         LoanDepartment.giveLoan(kanan, kanan.getCards().get(1), 100);
 
