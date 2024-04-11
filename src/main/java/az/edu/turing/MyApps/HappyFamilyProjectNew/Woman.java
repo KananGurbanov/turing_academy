@@ -11,9 +11,9 @@ public class Woman extends Human{
             return new Man();
         }
 
-        else{
-            return new Woman();
-        }
+
+        return new Woman();
+
 
     }
 }

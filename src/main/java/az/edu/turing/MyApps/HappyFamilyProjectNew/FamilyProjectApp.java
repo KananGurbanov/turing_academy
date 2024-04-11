@@ -12,10 +12,9 @@ public class FamilyProjectApp {
         Human father1 = new Human("Yazil", "Babayev", 1970,100,new Pet(),new Human(),new Human(), new HashMap<>());
 
 
-
-
-
         father1.getSchedule().put(DayofWeek.MONDAY, "Walking");
+
+
 
 
 
