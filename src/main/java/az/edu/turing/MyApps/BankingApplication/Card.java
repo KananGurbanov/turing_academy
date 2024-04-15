@@ -5,6 +5,11 @@ public abstract class Card {
 
     public Company make;
 
+    public Card(double balance, Company make) {
+        this.balance = balance;
+        this.make = make;
+    }
+
     public Card(Company make) {
         this.make = make;
         this.balance = 0;
@@ -22,11 +27,5 @@ public abstract class Card {
         this.balance = balance;
     }
 
-    @Override
-    public String toString() {
-        return "Card{" +
-                "balance=" + balance +
-                ", make=" + make +
-                '}';
-    }
+
 }

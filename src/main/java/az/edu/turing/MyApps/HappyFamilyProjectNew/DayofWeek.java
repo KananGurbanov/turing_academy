@@ -1,4 +1,4 @@
-package az.edu.turing.module01.part1.lesson3;
+package az.edu.turing.MyApps.HappyFamilyProjectNew;
 
 public enum DayofWeek {
     MONDAY,

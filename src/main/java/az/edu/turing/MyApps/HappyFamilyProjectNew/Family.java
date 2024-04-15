@@ -11,6 +11,13 @@ public class Family {
 
     private Pet pet;
 
+    public Family(Human father, Human mother, ArrayList<Human> children, Pet pet) {
+        this.father = father;
+        this.mother = mother;
+        this.children = children;
+        this.pet = pet;
+    }
+
     public Human getFather() {
         return father;
     }

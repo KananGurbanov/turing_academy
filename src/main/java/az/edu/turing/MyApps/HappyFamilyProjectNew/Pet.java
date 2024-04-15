@@ -1,6 +1,6 @@
 package az.edu.turing.MyApps.HappyFamilyProjectNew;
 
-import az.edu.turing.module01.part1.lesson3.Species;
+import az.edu.turing.MyApps.HappyFamilyProjectNew.Species;
 
 import java.util.Arrays;
 import java.util.Set;
@@ -91,6 +91,7 @@ public class Pet {
     public void foul(){
         System.out.println("I need to cover it up");
     }
+
 
 
 }

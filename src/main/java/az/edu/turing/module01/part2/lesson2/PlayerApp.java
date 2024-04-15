@@ -55,7 +55,10 @@ public class PlayerApp {
 //        });
 
 
-        Arrays.sort(players, (p1,p2) -> (p1.id - p2.id));
+        Comparator<Player> p = (p1,p2) -> (p1.id - p2.id);
+
+
+        Arrays.sort(players, p);
 
 
         System.out.println(Arrays.toString(players));

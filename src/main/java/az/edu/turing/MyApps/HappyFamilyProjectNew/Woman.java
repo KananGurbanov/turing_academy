@@ -2,7 +2,7 @@ package az.edu.turing.MyApps.HappyFamilyProjectNew;
 
 import java.util.Random;
 
-public class Woman extends Human{
+public final class Woman extends Human{
     public void makeUp(){}
 
     public Human bornChild(){

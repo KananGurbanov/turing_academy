@@ -2,16 +2,22 @@ package az.edu.turing.MyApps.BankingApplication;
 
 public class BankAccount {
 
+    public static int numBankAccounts = 0;
+
+    private int id;
+
     private double balance;
 
     private double loan;
 
     public BankAccount() {
+        this.id = ++numBankAccounts;
         this.balance = 0;
         this.loan = 0;
     }
 
     public BankAccount(double balance, double loan) {
+        this.id = ++numBankAccounts;
         this.balance = balance;
         this.loan = loan;
     }
@@ -32,10 +38,19 @@ public class BankAccount {
         this.loan = loan;
     }
 
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
     @Override
     public String toString() {
         return "BankAccount{" +
-                "balance=" + balance +
+                "id=" + id +
+                ", balance=" + balance +
                 ", loan=" + loan +
                 '}';
     }

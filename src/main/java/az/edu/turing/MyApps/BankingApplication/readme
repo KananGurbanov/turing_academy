@@ -1,0 +1,19 @@
+
+Bank:
+
+- Human Resources
+- Transactions
+- Loan Department
+- Currency
+- Card Department
+- Account Department
+
+
+TO-DO:
+
+1. Refactor withdraw method(add to cash) +
+2. Refactor addBalance method(if cash exists) +
+3. Refactor sendMoney method (separate Card to consider loan) +
+4. Create ID for bank accounts +
+5. Refactor giveLoan(Card) method (check is it is credit card) +
+

@@ -17,6 +17,18 @@ public class Wallet {
 
     }
 
+    public Wallet(int cash, ArrayList<Card> cards) {
+        this.cash = cash;
+        this.cards = cards;
+
+    }
+
+
+
+
+
+
+
     public double getCash() {
         return cash;
     }

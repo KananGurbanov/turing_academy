@@ -2,8 +2,8 @@ package az.edu.turing.MyApps.BankingApplication;
 
 
 
-public class LoanDepartment {
-    public void giveLoan(Human h, BankAccount b, double amount){
+public interface LoanDepartment {
+    default void giveLoan(Human h, BankAccount b, double amount){
         if(h.haveBankAccount){
             b.setBalance(b.getBalance() + amount);
 
@@ -16,17 +16,21 @@ public class LoanDepartment {
         }
     }
 
-    public void giveLoan(Human h, CreditCard c, double amount){
-        if(h.getWallet().haveCreditCard){
+    default void giveLoan(Card c, double amount){
+
+        if(c instanceof CreditCard){
+
             c.setBalance(c.getBalance() + amount);
 
-            c.setLoan(c.getLoan() + amount);
+            ((CreditCard) c).setLoan(((CreditCard) c).getLoan() + amount);
 
             System.out.println(amount + " loan was given to your credit card : " + c);
         }
 
         else{
-            System.out.println("You do not have a credit card");
+            System.out.println("It isn't a credit card");
         }
     }
+
+
 }
