@@ -1,5 +1,9 @@
 package az.edu.turing.MyApps.HappyFamilyProjectNew;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -8,7 +12,7 @@ public class Human {
 
     private String surname;
 
-    private int year;
+    private long birthDateMillis;
 
     private int iq;
 
@@ -17,30 +21,42 @@ public class Human {
     private Family family;
 
 
-    public Human(String name, String surname, int year) {
+    public Human(String name, String surname, long year) {
         this.name = name;
         this.surname = surname;
-        this.year = year;
+        this.birthDateMillis = year;
         schedule = new HashMap<>(7);
+    }
+
+    public Human(String name, String surname, String birthDate, int iq) throws ParseException {
+        this.name = name;
+        this.surname = surname;
+        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+        Date date = sdf.parse(birthDate);
+        this.birthDateMillis = date.getTime();
+        this.iq = iq;
+        this.schedule = new HashMap<>();
     }
 
 
 
-    public Human(String name, String surname, int year, int iq, Map <DayofWeek, String> schedule) {
+
+
+    public Human(String name, String surname, long year, int iq, Map <DayofWeek, String> schedule) {
         this.name = name;
         this.surname = surname;
-        this.year = year;
+        this.birthDateMillis = year;
         this.iq = iq;
 
         this.schedule = schedule;
     }
 
-    public Human(String name, String surname, int year, Family family) {
+    public Human(String name, String surname, long year, Family family) {
         this.name = name;
         this.surname = surname;
-        this.year = year;
+        this.birthDateMillis = year;
         this.family = family;
-        schedule = new HashMap<>();
+        schedule = new HashMap<>(7);
     }
 
     public Human() {}
@@ -61,12 +77,12 @@ public class Human {
         this.surname = surname;
     }
 
-    public int getYear() {
-        return year;
+    public String getYear() {
+        return describeAge();
     }
 
-    public void setYear(int year) {
-        this.year = year;
+    public void setYear(long year) {
+        this.birthDateMillis = year;
     }
 
     public int getIq() {
@@ -101,15 +117,23 @@ public class Human {
 
         System.out.println("I have an " + family.getPet().getSpecies() + ". It is " + family.getPet().getAge() + ". ");
     }
+    public String describeAge() {
+        long currentTimeMillis = System.currentTimeMillis();
+        long ageMillis = currentTimeMillis - birthDateMillis;
+        long years = ageMillis / (1000L * 60 * 60 * 24 * 365);
+        long months = (ageMillis % (1000L * 60 * 60 * 24 * 365)) / (1000L * 60 * 60 * 24 * 30);
+        long days = ((ageMillis % (1000L * 60 * 60 * 24 * 365)) % (1000L * 60 * 60 * 24 * 30)) / (1000L * 60 * 60 * 24);
+        return years + " years, " + months + " months, " + days + " days";
+
+    }
 
     @Override
+
+
     public String toString() {
-        return "Human{" +
-                "name='" + name + '\'' +
-                ", surname='" + surname + '\'' +
-                ", year=" + year +
-                ", iq=" + iq +
-                ", schedule=" + schedule +
-                '}';
+        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+        Calendar calendar = Calendar.getInstance();
+        calendar.setTimeInMillis(birthDateMillis);
+        return "Name: " + name + ", Surname: " + surname + ", Birth Date: " + sdf.format(calendar.getTime()) + ", IQ: " + iq;
     }
 }
