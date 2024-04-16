@@ -6,7 +6,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class FamilyDAO implements DAO<Family> {
-
     List<Family> families;
 
     public FamilyDAO() {
@@ -22,7 +21,6 @@ public class FamilyDAO implements DAO<Family> {
     public Family getFamilyByIndex(int index) {
         return families.get(index);
     }
-
 
     @Override
     public boolean deleteFamily(int index) {

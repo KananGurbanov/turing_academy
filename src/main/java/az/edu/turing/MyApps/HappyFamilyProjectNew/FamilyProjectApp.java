@@ -16,6 +16,7 @@ public class FamilyProjectApp {
 
         father1.getSchedule().put(DayofWeek.MONDAY, "Walking");
 
+
         System.out.println(father1.getSchedule());
 
         System.out.println(family1.getChildren());
@@ -26,6 +27,14 @@ public class FamilyProjectApp {
         f.saveFamily(family1);
 
         System.out.println(f.getAllFamilies());
+
+        System.out.println(family1);
+
+        int [] arr = new int[3];
+
+        arr[2] = 3;
+
+        System.out.println(arr.length);
 
 
     }

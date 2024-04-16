@@ -110,7 +110,6 @@ public class Human {
                 ", year=" + year +
                 ", iq=" + iq +
                 ", schedule=" + schedule +
-                ", family=" + family +
                 '}';
     }
 }

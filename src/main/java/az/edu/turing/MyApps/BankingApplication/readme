@@ -17,3 +17,4 @@ TO-DO:
 4. Create ID for bank accounts +
 5. Refactor giveLoan(Card) method (check is it is credit card) +
 
+
