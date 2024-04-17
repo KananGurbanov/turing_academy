@@ -1,5 +1,52 @@
 package az.edu.turing.module01.part2.lesson6.Collections;
 
+import java.util.Objects;
+
+class Node <T>{
+    private  T data;
+
+    private Node <T> next;
+
+    public Node(T data) {
+        this.data = data;
+        this.next = null;
+    }
+
+    public T getData() {
+        return data;
+    }
+
+    public void setData(T data) {
+        this.data = data;
+    }
+
+    public Node<T> getNext() {
+        return next;
+    }
+
+    public void setNext(Node<T> next) {
+        this.next = next;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Node<?> node = (Node<?>) o;
+        return Objects.equals(data, node.data) && Objects.equals(next, node.next);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(data, next);
+    }
+
+    @Override
+    public String toString() {
+        return "data=" + data + "-->";
+    }
+}
+
 
 public class LinkedList <T> {
     Node<T> head;
@@ -7,8 +54,8 @@ public class LinkedList <T> {
 
     private int size;
 
-    public LinkedList(Node<T> head) {
-        this.head = head;
+    public LinkedList(T head) {
+        this.head = new Node<>(head);
         this.size++;
     }
 
@@ -20,7 +67,7 @@ public class LinkedList <T> {
         return head == null;
     }
 
-    Node <T> get(int index){
+    T get(int index){
         Node<T> temp = head;
         int indice = 0;
         if(index >= getSize()){
@@ -32,7 +79,7 @@ public class LinkedList <T> {
                 indice++;
             }
         }
-        return temp;
+        return temp.getData();
 
     }
 
@@ -61,7 +108,8 @@ public class LinkedList <T> {
 
     }
 
-    void addTail(Node <T> tail){
+    void addTail(T data){
+        Node <T> tail = new Node<>(data);
         Node <T> temp = head;
         while(temp.getNext() != null){
             temp = temp.getNext();
@@ -72,7 +120,8 @@ public class LinkedList <T> {
         size++;
     }
 
-    void addHead(Node<T> head){
+    void addHead(T data){
+        Node <T> head = new Node<>(data);
         if(tail == null){
             this.head = tail = head;
         }
@@ -86,7 +135,8 @@ public class LinkedList <T> {
 
     }
 
-    void deleteItem(Node <T> node){
+    void deleteItem(T data){
+        Node <T> node = new Node<>(data);
         if(node.hashCode() == head.hashCode()){
             deleteFirst();
         }
@@ -96,7 +146,7 @@ public class LinkedList <T> {
         else{
             Node<T> curr = head;
             while(curr.getNext()!= null){
-                if(curr.getNext().equals(node)){
+                if(curr.getNext().getData() == (node.getData())){
                     curr.setNext(curr.getNext().getNext());
                 }
                 curr = curr.getNext();
@@ -118,7 +168,7 @@ public class LinkedList <T> {
 //        }
 //    }
     void update(int index ,T newData){
-        get(index).setData(newData);
+        //get(index).setData(newData);
     }
 
     void deleteFirst(){

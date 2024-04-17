@@ -2,24 +2,24 @@ package az.edu.turing.module01.part2.lesson6.Collections;
 
 public class LinkedListApp {
     public static void main(String[] args) {
-        Node<Integer> ten = new Node<>(10);
 
-        LinkedList<Integer> myLinkedList = new LinkedList<>(ten);
 
-        Node<Integer> twelve = new Node<>(12);
+        LinkedList<Integer> myLinkedList = new LinkedList<>(10);
 
-        Node<Integer> eight = new Node<>(8);
 
         System.out.println(myLinkedList);
 
-        Node<Integer> five = new Node<>(5);
 
-        //myLinkedList.addTail(ten);
-        myLinkedList.addTail(eight);
-        myLinkedList.addHead(twelve);
-        myLinkedList.addHead(five);
+        myLinkedList.addTail(12);
+
+        myLinkedList.addHead(8);
+
+        myLinkedList.addHead(6);
+
         System.out.println(myLinkedList.get(3));
-        myLinkedList.deleteIndex(3);
+
+        myLinkedList.deleteItem(10);
+
         myLinkedList.update(1,14);
         System.out.println(myLinkedList);
         System.out.println(myLinkedList.getSize());
