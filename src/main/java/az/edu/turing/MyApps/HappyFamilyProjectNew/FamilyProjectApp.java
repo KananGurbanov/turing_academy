@@ -10,7 +10,7 @@ import java.util.List;
 public class FamilyProjectApp {
     public static void main(String[] args) throws ParseException {
 
-        List<Human> children = new ArrayList<>();
+
         Human father1 = new Human("Yazil", "Babayev","20/03/1990", 120);
 
         Family family1 = new Family(father1, new Human(), new ArrayList<>(), new Pet());

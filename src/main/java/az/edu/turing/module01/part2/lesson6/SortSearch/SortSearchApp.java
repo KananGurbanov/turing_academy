@@ -1,10 +1,22 @@
-package az.edu.turing.module01.part2.lesson6;
+package az.edu.turing.module01.part2.lesson6.SortSearch;
 
-public class SortApp {
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+
+public class SortSearchApp {
     public static void main(String[] args) {
 
 
         int arr[] ={3,60,35,2,45,320,5};
+
+        //BINARY SEARCH
+
+//        Arrays.sort(arr);
+//
+//        int index = binarySearch(arr, 45);
+//
+//        System.out.println(index);
 
         //BUBBLE SORT
 
@@ -14,29 +26,39 @@ public class SortApp {
 
 //        selectionSort(arr);
 
+
         //MERGE SORT
 
-//        mergeSort(arr);
+        mergeSort(arr);
 
 
 
         printArray(arr);
 
+        //COLLECTIONS SORT
 
+        ArrayList<Integer> ar = new ArrayList<>();
+
+        Collections.sort(ar);
     }
 
     static void bubbleSort(int [] arr){
         int n = arr.length;
 
-        for(int i=0; i < n; i++){
-            for(int j=1; j < (n-i); j++){
+        for(int i = 0; i < n; i++){
+            boolean sorted = true;
+            for(int j = 1; j < (n - i); j++){
                 if(arr[j-1] > arr[j]){
                     //swap elements
                     int temp = arr[j-1];
                     arr[j-1] = arr[j];
                     arr[j] = temp;
+                    sorted = false;
                 }
 
+            }
+            if(sorted){
+                return;
             }
         }
     }
@@ -44,17 +66,17 @@ public class SortApp {
     static void selectionSort(int [] arr){
         int n = arr.length;
 
-        for (int i = 0; i < arr.length - 1; i++)
+        for (int i = 0; i < n - 1; i++)
         {
-            int index = i;
-            for (int j = i + 1; j < arr.length; j++){
-                if (arr[j] < arr[index]){
-                    index = j;//searching for lowest index
+
+            for (int j = i + 1; j < n; j++){
+                if (arr[i] > arr[j]){
+                    int temp = arr[i];
+                    arr[i] = arr[j];
+                    arr[j] = temp;
                 }
             }
-            int smallerNumber = arr[index];
-            arr[index] = arr[i];
-            arr[i] = smallerNumber;
+
         }
     }
 
@@ -69,7 +91,7 @@ public class SortApp {
 
         int [] rightArray = new int [length - middle];
 
-        int  i = 0;
+        int i = 0;
 
         int j = 0;
 
@@ -129,9 +151,25 @@ public class SortApp {
 
     }
 
-    static void printArray(int [] arr){
-        for (int i: arr){
-            System.out.println(i);
+    static int binarySearch(int [] arr, int target){
+        int r = arr.length - 1;
+        int l = 0;
+        while(l<r){
+            int mid = (l +r) / 2;
+            if(arr[mid] == target){
+                return mid;
+            }
+            else if (arr[mid] > target){
+                r = mid;
+            }
+            else{
+                l = mid;
+            }
         }
+        return -1;
+    }
+
+    static void printArray(int [] arr){
+        System.out.println(Arrays.toString(arr));
     }
 }

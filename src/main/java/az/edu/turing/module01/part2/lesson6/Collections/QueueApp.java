@@ -1,4 +1,4 @@
-package az.edu.turing.module01.part2.lesson6;
+package az.edu.turing.module01.part2.lesson6.Collections;
 
 import java.util.Queue;
 

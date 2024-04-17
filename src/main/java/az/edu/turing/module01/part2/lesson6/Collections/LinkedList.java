@@ -1,10 +1,8 @@
-package az.edu.turing.module01.part2.lesson6;
+package az.edu.turing.module01.part2.lesson6.Collections;
 
-
-import java.util.Scanner;
 
 public class LinkedList <T> {
-    Node <T> head;
+    Node<T> head;
     Node <T> tail;
 
     private int size;
