@@ -3,26 +3,31 @@ package az.edu.turing.MyApps.HappyFamilyProjectNew;
 import java.util.ArrayList;
 
 public class Family {
-    private Human father;
+    private Man father;
 
-    private Human mother;
+    private Woman mother;
 
     private ArrayList<Human> children = new ArrayList<>();
 
     private Pet pet;
 
-    public Family(Human father, Human mother, ArrayList<Human> children, Pet pet) {
+    public Family(Man father, Woman mother, ArrayList<Human> children, Pet pet) {
         this.father = father;
         this.mother = mother;
         this.children = children;
         this.pet = pet;
     }
 
+    public Family(Man father, Woman mother) {
+        this.father = father;
+        this.mother = mother;
+    }
+
     public Human getFather() {
         return father;
     }
 
-    public void setFather(Human father) {
+    public void setFather(Man father) {
         this.father = father;
     }
 
@@ -30,7 +35,7 @@ public class Family {
         return mother;
     }
 
-    public void setMother(Human mother) {
+    public void setMother(Woman mother) {
         this.mother = mother;
     }
 

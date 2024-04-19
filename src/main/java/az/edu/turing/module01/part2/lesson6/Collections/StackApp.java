@@ -11,6 +11,7 @@ public class StackApp {
         stack.push(5);
         stack.push(4);
 
+
         System.out.println(stack);
 
 //        System.out.println(stack.pop());

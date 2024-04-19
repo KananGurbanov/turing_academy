@@ -1,38 +1,35 @@
 package az.edu.turing.MyApps.HappyFamilyProjectNew;
 
-import az.edu.turing.MyApps.HappyFamilyProjectNew.Family;
-
 import java.text.ParseException;
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
 
 public class FamilyProjectApp {
     public static void main(String[] args) throws ParseException {
 
 
-        Human father1 = new Human("Yazil", "Babayev","20/03/1990", 120);
+        Man father1 = new Man("Yazil", "Babayev", "20/03/1990", 120);
 
-        Family family1 = new Family(father1, new Human(), new ArrayList<>(), new Pet());
+        Family family1 = new Family(father1, new Woman(), new ArrayList<>(), new Pet());
 
-        father1.getSchedule().put(DayofWeek.MONDAY, "Walking");
-
-        System.out.println(father1.getSchedule());
-
-        System.out.println(father1);
-
-        System.out.println(family1.getChildren());
+        Family family2 = new Family(new Man("Fail", "gasimov", 2978693), new Woman(), new ArrayList<>(), new Pet("Toplan"));
 
 
-        FamilyDAO f = new FamilyDAO();
+
+
+        CollectionFamilyDAO f = new CollectionFamilyDAO();
 
         f.saveFamily(family1);
 
+        f.saveFamily(family2);
+
         System.out.println(f.getAllFamilies());
 
-        System.out.println(family1);
-        
+        f.displayAllFamilies();
+
+        System.out.println(f.bornChild(family1, "FEMININE"));
 
 
     }
+
+
 }

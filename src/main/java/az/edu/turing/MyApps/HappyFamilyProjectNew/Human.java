@@ -59,6 +59,12 @@ public class Human {
         schedule = new HashMap<>(7);
     }
 
+    public Human(String name, String surname, Family family) {
+        this.name = name;
+        this.surname = surname;
+        this.family = family;
+    }
+
     public Human() {}
 
     public String getName() {

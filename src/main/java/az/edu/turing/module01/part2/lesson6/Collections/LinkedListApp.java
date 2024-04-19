@@ -7,8 +7,6 @@ public class LinkedListApp {
         LinkedList<Integer> myLinkedList = new LinkedList<>(10);
 
 
-        System.out.println(myLinkedList);
-
 
         myLinkedList.addTail(12);
 
@@ -16,12 +14,15 @@ public class LinkedListApp {
 
         myLinkedList.addHead(6);
 
-        System.out.println(myLinkedList.get(3));
 
-        myLinkedList.deleteItem(10);
+
+
 
         myLinkedList.update(1,14);
+
+
+
         System.out.println(myLinkedList);
-        System.out.println(myLinkedList.getSize());
+
     }
 }

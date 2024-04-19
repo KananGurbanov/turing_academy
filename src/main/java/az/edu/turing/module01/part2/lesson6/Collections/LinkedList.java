@@ -12,6 +12,11 @@ class Node <T>{
         this.next = null;
     }
 
+    public Node(T data, Node<T> x){
+        this.setData(data);
+        this.setNext(x);
+    }
+
     public T getData() {
         return data;
     }
@@ -83,19 +88,32 @@ public class LinkedList <T> {
 
     }
 
+
+
+    void addTail(T data){
+        Node <T> tail = new Node<>(data);
+        Node <T> temp = head;
+        while(temp.getNext() != null){
+            temp = temp.getNext();
+        }
+        temp.setNext(tail);
+        this.tail = tail;
+        size++;
+    }
+    void addHead(T data){
+        this.head = new Node<>(data, this.head);
+
+    }
+
     void deleteIndex(int index){
         Node<T> temp = head;
         int indice = 0;
-
         if(index >= getSize()){
             System.out.println("Index out of bound");
         }
-
         else if (index == 0){
             deleteFirst();
         }
-
-
         else{
             while(index > indice + 1){
                 temp = temp.getNext();
@@ -105,34 +123,6 @@ public class LinkedList <T> {
             temp.setNext(temp.getNext().getNext());
             size--;
         }
-
-    }
-
-    void addTail(T data){
-        Node <T> tail = new Node<>(data);
-        Node <T> temp = head;
-        while(temp.getNext() != null){
-            temp = temp.getNext();
-        }
-
-        temp.setNext(tail);
-        this.tail = tail;
-        size++;
-    }
-
-    void addHead(T data){
-        Node <T> head = new Node<>(data);
-        if(tail == null){
-            this.head = tail = head;
-        }
-        else{
-            head.setNext(this.head);
-//            Node<T> temp = head;
-//            head = this.head;
-            this.head = head;
-            size++;
-        }
-
     }
 
     void deleteItem(T data){
@@ -140,18 +130,17 @@ public class LinkedList <T> {
         if(node.hashCode() == head.hashCode()){
             deleteFirst();
         }
-        else if(node.hashCode() == tail.hashCode()){
-            deleteLast();
-        }
         else{
             Node<T> curr = head;
             while(curr.getNext()!= null){
                 if(curr.getNext().getData() == (node.getData())){
                     curr.setNext(curr.getNext().getNext());
+                    size--;
+                    break;
                 }
                 curr = curr.getNext();
             }
-            size--;
+
         }
 
     }
@@ -168,7 +157,15 @@ public class LinkedList <T> {
 //        }
 //    }
     void update(int index ,T newData){
-        //get(index).setData(newData);
+        Node <T> temp = head;
+        int indice = 0;
+
+        while(indice < index){
+            temp = temp.getNext();
+            indice++;
+        }
+
+        temp.setData(newData);
     }
 
     void deleteFirst(){

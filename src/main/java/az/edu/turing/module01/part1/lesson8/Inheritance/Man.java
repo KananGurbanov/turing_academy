@@ -1,4 +1,4 @@
-package az.edu.turing.module01.part1.lesson8;
+package az.edu.turing.module01.part1.lesson8.Inheritance;
 
 public class Man extends Human implements SportsHuman {
     private double estrogenLevel;

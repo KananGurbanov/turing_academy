@@ -9,6 +9,7 @@ public class SetApp {
 
         set.add(3);
         set.add(5);
+
         set.add(1);
         set.add(7);
         set.add(6);
