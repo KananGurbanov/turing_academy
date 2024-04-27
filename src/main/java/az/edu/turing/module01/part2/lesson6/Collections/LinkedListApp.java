@@ -18,7 +18,7 @@ public class LinkedListApp {
 
 
 
-        myLinkedList.update(1,14);
+        myLinkedList.insert(1,14);
 
 
 

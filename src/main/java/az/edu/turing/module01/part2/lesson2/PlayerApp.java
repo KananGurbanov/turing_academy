@@ -45,6 +45,9 @@ public class PlayerApp {
 
 
 
+        Integer [] n = new Integer[4];
+
+
 
 
 //        Arrays.sort(players, new Comparator<Player>(){
@@ -58,15 +61,12 @@ public class PlayerApp {
         Comparator<Player> p = (p1,p2) -> (p1.id - p2.id);
 
 
-        Arrays.sort(players, p);
+        Arrays.sort(players, (p1,p2) -> (p1.id - p2.id));
 
 
         System.out.println(Arrays.toString(players));
 
 
-//        Player p = new Player("dff",23,8);
-//
-//        System.out.println(p.toString());
 
 
     }

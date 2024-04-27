@@ -156,16 +156,44 @@ public class LinkedList <T> {
 //            curr = curr.getNext();
 //        }
 //    }
-    void update(int index ,T newData){
-        Node <T> temp = head;
-        int indice = 0;
 
-        while(indice < index){
-            temp = temp.getNext();
-            indice++;
+
+    void insert (int index, T data){
+        if(index >= getSize() || index <0){
+            System.out.println("Index out of bound exception");
+        }
+        else{
+            Node<T> newNode = new Node<>(data);
+            Node<T> temp = head;
+            int i = 0;
+
+            while(i + 1 < index){
+                temp = temp.getNext();
+            }
+            Node<T> next = temp.getNext();
+            temp.setNext(newNode);
+            newNode.setNext(next);
         }
 
-        temp.setData(newData);
+
+
+    }
+    void update(int index ,T newData){
+        if(index >= getSize() || index < 0){
+            System.out.println("Index out of bound exception");
+        }
+        else{
+            Node <T> temp = head;
+            int indice = 0;
+
+            while(indice < index){
+                temp = temp.getNext();
+                indice++;
+            }
+
+            temp.setData(newData);
+        }
+
     }
 
     void deleteFirst(){

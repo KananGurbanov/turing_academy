@@ -55,7 +55,7 @@ public class Sort {
         }
     }
 
-    static void mergeSort(int [] arr){
+    static void mergeSortV1(int [] arr){
         int n = arr.length;
 
         if(n<=1) return;
@@ -79,15 +79,72 @@ public class Sort {
         mergeSort(leftArray);
         mergeSort(rightArray);
 
+        merge(leftArray, rightArray,arr);
+
+    }
+
+    static void mergeV1(int [] leftArray, int [] rightArray, int [] arr){
+        int leftSize = arr.length / 2;
+        int rightSize = arr.length - leftSize;
+        int i = 0, l = 0, r = 0;
+
+        while(l<leftSize && r<rightSize){
+            if(leftArray[l] < rightArray[r]){
+                arr[i] = leftArray[l];
+                i++;
+                l++;
+            }
+            else{
+                arr[i] = rightArray[r];
+                i++;
+                r++;
+            }
+        }
+
+        while(l<leftSize){
+            arr[i] = leftArray[l];
+            i++;
+            l++;
+        }
+
+        while(r<rightSize){
+            arr[i] = rightArray[r];
+            i++;
+            r++;
+        }
+
+
+    }
+
+
+    static void mergeSort(int [] arr){
+        int length = arr.length;
+
+        if (length == 1) return;
+
+        int middle = length / 2;
+
+        int [] leftArray = new int [middle];
+
+        int [] rightArray = new int [length - middle];
+
+        for (int i = 0; i < length; i++){
+            if(i<middle){
+                leftArray[i] = arr[i];
+            }
+            else{
+                rightArray[i - middle] = arr[i];
+            }
+        }
+
+        mergeSort(leftArray);
+
+        mergeSort(rightArray);
+
         merge(leftArray, rightArray, arr);
-    }
-
-    static void merge(int [] leftArray, int [] rightArray, int [] arr){
 
     }
-
-
-    static void mergev1(int [] leftArray, int [] rightArray, int [] array){
+    static void merge(int [] leftArray, int [] rightArray, int [] array){
 
         int leftSize = array.length / 2;
 
@@ -98,31 +155,27 @@ public class Sort {
         while(l < leftSize && r < rightSize){
             if(leftArray[l] < rightArray[r]){
                 array[i] = leftArray[l];
-                i++;
                 l++;
+                i++;
             }
             else{
                 array[i] = rightArray[r];
                 i++;
                 r++;
-
             }
         }
 
-        while (l<leftSize){
+        while(l < leftSize){
             array[i] = leftArray[l];
-            i++;
             l++;
-
+            i++;
         }
 
-        while(r<rightSize){
+        while(r < rightSize){
             array[i] = rightArray[r];
             i++;
             r++;
-
         }
-
 
     }
 
