@@ -25,5 +25,7 @@ public class RandomNumbersDuplicate {
         }
 
         System.out.println(map);
+
+
     }
 }

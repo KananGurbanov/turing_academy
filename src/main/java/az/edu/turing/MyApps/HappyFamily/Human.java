@@ -1,5 +1,8 @@
 package az.edu.turing.MyApps.HappyFamily;
 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -8,7 +11,7 @@ public class Human {
 
     private String surname;
 
-    private int year;
+    private int birthDate;
 
     private int iq;
 
@@ -20,21 +23,21 @@ public class Human {
     public Human(String name, String surname, int year) {
         this.name = name;
         this.surname = surname;
-        this.year = year;
+        this.birthDate = year;
         schedule = new HashMap<>(7);
     }
 
     public Human(String name, String surname, int year, int iq) {
         this.name = name;
         this.surname = surname;
-        this.year = year;
+        this.birthDate = year;
         this.iq = iq;
     }
 
     public Human(String name, String surname, int year, int iq, Map<DayofWeek, String> schedule, Family family) {
         this.name = name;
         this.surname = surname;
-        this.year = year;
+        this.birthDate = year;
         this.iq = iq;
         this.schedule = schedule;
         this.family = family;
@@ -43,7 +46,7 @@ public class Human {
     public Human(String name, String surname, int year, Family family) {
         this.name = name;
         this.surname = surname;
-        this.year = year;
+        this.birthDate = year;
         this.family = family;
         schedule = new HashMap<>(7);
     }
@@ -72,12 +75,9 @@ public class Human {
         this.surname = surname;
     }
 
-    public int getYear() {
-        return year;
-    }
 
     public void setYear(int year) {
-        this.year = year;
+        this.birthDate = year;
     }
 
     public int getIq() {
@@ -104,21 +104,40 @@ public class Human {
         this.family = family;
     }
 
-//    public void greetPet(int index){
-//        System.out.println("Hello, " + family.getPet().getNickname());
-//    }
-//
-//    public void describePet(){
-//
-//        System.out.println("I have an " + family.getPet().getSpecies() + ". It is " + family.getPet().getAge() + ". ");
-//    }
+    public String describeAge() {
+        long now = System.currentTimeMillis();
+        long ageInMillis = now - birthDate;
+        Calendar ageCal = Calendar.getInstance();
+        ageCal.setTimeInMillis(ageInMillis);
+        int years = ageCal.get(Calendar.YEAR) - 1970;
+        int months = ageCal.get(Calendar.MONTH);
+        int days = ageCal.get(Calendar.DAY_OF_MONTH) - 1;
+        return String.format("%d years, %d months, %d days", years, months, days);
+    }
+
+    public int getBirthYear() {
+        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy");
+        Date date = new Date(birthDate);
+        return Integer.parseInt(dateFormat.format(date));
+}
+
+    public void greetPet(int index){
+        System.out.println("Hello, " + family.getPets());
+    }
+
+    public void describePet(){
+
+        System.out.println("I have an " + family.getPets()+ ". It is " + family.getPets() + ". ");
+    }
+
+
 
     @Override
     public String toString() {
         return "{" +
                 "name='" + name + '\'' +
                 ", surname='" + surname + '\'' +
-                ", year=" + year +
+                ", year=" + birthDate +
                 ", iq=" + iq +
                 ", schedule=" + schedule +
                 '}';

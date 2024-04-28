@@ -35,7 +35,7 @@ public final class Man extends Human {
         return "{" +
                 "name='" + getName() + '\'' +
                 ", surname='" + getSurname() + '\'' +
-                ", year=" + getYear() +
+                ", year=" + getBirthYear() +
                 ", iq=" + getIq() +
                 ", schedule=" + getSchedule() +
                 ", gender='man'" +

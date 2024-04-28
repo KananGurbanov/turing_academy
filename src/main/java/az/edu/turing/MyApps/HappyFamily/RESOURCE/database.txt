@@ -1,0 +1,2 @@
+Family{father={name='Barel', surname='Babayev', year=1970, iq=0, schedule={}, gender='man'}, mother={name='Barella', surname='Babayeva', year=1970, iq=0, schedule={}, gender='woman'}, children=[], pets=[Pet{species='null', nickname='Chubush', age=0, trickLevel=0, habits=null}]}
+Family{father={name='Tofig', surname='Taghizadeh', year=1970, iq=0, schedule={}, gender='man'}, mother={name='Inara', surname='Babayeva', year=1970, iq=0, schedule={}, gender='woman'}, children=[], pets=[]}

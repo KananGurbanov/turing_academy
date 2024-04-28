@@ -1,0 +1,6 @@
+ - In order to instantiate Functional Interface it is needed to have abstract method overridden.
+  So ways are:
+- Anonymous classes
+- Lambda expressions
+- Method references
+- Creating a class that implements it (Inheritance). So that its method is overridden.

@@ -35,6 +35,8 @@ public interface FamilyDAO {
 
     void addPet(int familyIndex,Pet pet);
 
+    void loadData(List<Family> families);
+
 
 
 

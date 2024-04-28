@@ -88,6 +88,22 @@ public class Family {
         return this.getChildren().size() + 2;
     }
 
+    String prettyFormat(){
+        StringBuilder sb = new StringBuilder();
+
+        sb.append("family :\n\t\t");
+        sb.append( "mother : " + mother + "\n\t\t");
+        sb.append("father : " + getFather() + "\n\t\t");
+        sb.append("children :\n\t\t\t\t");
+        getChildren().stream().filter(x->x instanceof Man).forEach(child->sb.append("boy : " + child + "\n\t\t\t\t"));
+        getChildren().stream().filter(x->x instanceof Woman).forEach(child->sb.append("girl : " +child +"\n\t\t\t\t"));
+
+        sb.append("\n\t\tpets : " + getPets());
+
+        return sb.toString();
+
+    }
+
     @Override
     public String toString() {
         return "Family{" +

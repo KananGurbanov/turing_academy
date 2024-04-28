@@ -24,7 +24,7 @@ public class StudentManagementApp {
 
         StudentDTO studentDTO1 = studentController.createStudent(new StudentDTO("1245567", "xanim123", 100, 19));
 
-        //System.out.println(dao.getAll());
+        System.out.println(dao.getAll());
 
     }
 }

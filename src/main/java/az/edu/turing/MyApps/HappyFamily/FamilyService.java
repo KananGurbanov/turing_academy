@@ -11,20 +11,7 @@ public class FamilyService {
     }
 
     void displayAllFamilies(){
-//        int i = 0;
-//        for (Family f : familyDAO.getAllFamilies()){
-//            System.out.println("Family " + (++i) + " :");
-//            System.out.println("Mother : " + f.getMother());
-//            System.out.println("Father : " + f.getFather());
-//            System.out.println("Children :");
-//            for(Human child : f.getChildren()){
-//                if(child instanceof Man){
-//                    child = (Man) child;
-//                    System.out.println(child);
-//                }
-//            }
-//        }
-        familyDAO.getAllFamilies().forEach(System.out::println);
+        familyDAO.getAllFamilies().stream().forEach(System.out::println);
     }
 
     List<Family> getFamiliesBiggerThan(int numberOfPeople){
@@ -65,5 +52,9 @@ public class FamilyService {
 
     void addPet(int familyIndex, Pet pet) {
         familyDAO.addPet(familyIndex, pet);
+    }
+
+    void loadData(List<Family> families){
+        familyDAO.loadData(families);
     }
 }

@@ -1,10 +1,19 @@
 package az.edu.turing.MyApps.HappyFamily;
 
+import az.edu.turing.MyApps.HappyFamily.Exceptions.FamilyOverFlowException;
+
+import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
+import java.util.stream.Collectors;
 
 public class CollectionsFamilyDAO implements FamilyDAO{
+
+    private static final String RESOURCE = "src/main/java/az/edu/turing/MyApps/HappyFamily/RESOURCE/";
+
+    private static final String DATABASE = RESOURCE + "database.txt";
+
     List<Family> families = new ArrayList<>();
 
     @Override
@@ -47,44 +56,23 @@ public class CollectionsFamilyDAO implements FamilyDAO{
 
     @Override
     public List<Family> getFamiliesBiggerThan(int numberOfPeople) {
-        List<Family> f = new ArrayList<>();
-
-        for(Family family : getAllFamilies()){
-            if(family.countFamily() > numberOfPeople){
-                f.add(family);
-            }
-        }
-        return f;
+        return getAllFamilies().stream().filter(x->x.countFamily()>numberOfPeople).collect(Collectors.toList());
     }
 
     @Override
     public List<Family> getFamiliesLessThan(int numberOfPeople) {
-        List<Family> f = new ArrayList<>();
-
-        for(Family family : getAllFamilies()){
-            if(family.countFamily() < numberOfPeople){
-                f.add(family);
-            }
-        }
-        return f;
+        return getAllFamilies().stream().filter(x->x.countFamily() < numberOfPeople).collect(Collectors.toList());
     }
 
     @Override
     public int countFamiliesWithMemberNumber(int numberOfPeople) {
-        int count = 0;
-
-        for( Family f : getAllFamilies()){
-            if(f.countFamily() == numberOfPeople){
-                count++;
-            }
-        }
-
-        return count;
+        return (int) getAllFamilies().stream().filter(x->x.countFamily() == numberOfPeople).count();
     }
 
     @Override
     public Family createNewFamily(Human mother, Human father) {
-        Family f = createNewFamily(mother, father);
+
+        Family f = new Family((Man) father, (Woman) mother);
         saveFamily(f);
         return f;
     }
@@ -103,19 +91,16 @@ public class CollectionsFamilyDAO implements FamilyDAO{
 
     @Override
     public Family adoptChild(Family family, Human child) {
+        if(family.countFamily() >= 5){
+            throw new FamilyOverFlowException("Family size exceeded!");
+        }
         family.addChild(child);
         return family;
     }
 
     @Override
     public void deleteAllChildrenOlderThan(int age) {
-        for(Family f : getAllFamilies()){
-            for(Human child : f.getChildren()){
-                if(child.getYear() > age){
-                    f.getChildren().remove(child);
-                }
-            }
-        }
+        getAllFamilies().stream().forEach(x->x.getChildren().removeIf(child->child.getBirthYear() > age));
     }
 
     @Override
@@ -131,5 +116,39 @@ public class CollectionsFamilyDAO implements FamilyDAO{
     @Override
     public void addPet(int familyIndex, Pet pet) {
         getAllFamilies().get(familyIndex).getPets().add(pet);
+    }
+
+    @Override
+    public void loadData(List<Family> families) {
+        File file = new File(DATABASE);
+        try (BufferedWriter bw = new BufferedWriter(new FileWriter(DATABASE));){
+
+            getAllFamilies().forEach(x-> {
+                String string = x.toString();
+                try {
+                    bw.write(string+"\n");
+                } catch (IOException e) {
+                    throw new RuntimeException(e);
+                }
+            });
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+
+
+        try (BufferedReader br = new BufferedReader(new FileReader(DATABASE));){
+
+            String s = "";
+            StringBuilder sb = new StringBuilder();
+            while((s = br.readLine())!=null){
+                sb.append(s+"\n");
+            }
+            System.out.println(sb);
+
+        } catch (FileNotFoundException e) {
+            throw new RuntimeException(e);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 }

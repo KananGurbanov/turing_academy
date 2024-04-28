@@ -6,6 +6,8 @@ import java.util.List;
 public class Smth {
     private final String name;
 
+    public static int s = 10;
+
     private final int age;
 
     public Smth(String name, int age) {
@@ -32,8 +34,6 @@ public class Smth {
         final List<Integer> list = new ArrayList<>();
 
         list.add(13);
-
-
 
 
 
