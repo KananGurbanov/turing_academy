@@ -1,5 +1,6 @@
 package az.edu.turing.MyApps.HappyFamily;
 
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
@@ -27,12 +28,16 @@ public class Human {
         schedule = new HashMap<>(7);
     }
 
-    public Human(String name, String surname, int year, int iq) {
+
+
+    public Human(String name, String surname, String birthDateStr, int iq) throws ParseException {
         this.name = name;
         this.surname = surname;
-        this.birthDate = year;
-        this.iq = iq;
-    }
+        SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
+        Date date = dateFormat.parse(birthDateStr);
+        this.setYear((int) date.getTime());
+        this.iq=iq;
+}
 
     public Human(String name, String surname, int year, int iq, Map<DayofWeek, String> schedule, Family family) {
         this.name = name;

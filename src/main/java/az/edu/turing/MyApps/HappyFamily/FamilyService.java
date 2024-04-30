@@ -11,7 +11,7 @@ public class FamilyService {
     }
 
     void displayAllFamilies(){
-        familyDAO.getAllFamilies().stream().forEach(System.out::println);
+        familyDAO.getAllFamilies().stream().forEach(x-> System.out.println(x.prettyFormat()));
     }
 
     List<Family> getFamiliesBiggerThan(int numberOfPeople){

@@ -8,9 +8,7 @@ public final class Woman extends Human {
         super(name, surname, year);
     }
 
-    public Woman(String name, String surname, int year, int iq) {
-        super(name, surname, year, iq);
-    }
+
 
     public Woman(String name, String surname, int year, int iq, Map<DayofWeek, String> schedule, Family family) {
         super(name, surname, year, iq, schedule, family);

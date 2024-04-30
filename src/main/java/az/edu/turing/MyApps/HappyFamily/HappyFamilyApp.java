@@ -78,16 +78,19 @@ public class HappyFamilyApp {
                         System.out.println(familyController.countFamiliesWithMemberNumber(3));;
                         break;
                     case "6":
-                        familyController.createNewFamily(new Woman("Unknown","Unknown",123),new Man("sdfsd","adfsdfs",1232));
+                        familyController.createNewFamily(new Woman("Naila","Allahverdiyeva",		10327378),new Man("Nicat","Aliyev",1232));
                         break;
                     case "7":
-                        System.out.println(c.deleteFamily(0));
+                        System.out.print("Enter the index of the family to delete: ");
+                        int indexToDelete = Integer.parseInt(new Scanner(System.in).nextLine().trim());
+                        System.out.println(c.deleteFamily(indexToDelete));
                         break;
                     case "8.1":
                         System.out.println(familyController.bornChild(c.getFamilyByIndex(0), "Salim", "man"));
                         break;
                     case "8.2":
                         System.out.println(familyController.adoptChild(c.getFamilyByIndex(0),new Human("Stakan","Nelbeki",2002)));
+                        break;
                     case "9":
                         familyController.deleteAllChildrenOlderThan(18);
                         break;
@@ -101,6 +104,8 @@ public class HappyFamilyApp {
                 System.out.println("An error occurred: " + e.getMessage());
             }
         }
+
+
 
 
     }

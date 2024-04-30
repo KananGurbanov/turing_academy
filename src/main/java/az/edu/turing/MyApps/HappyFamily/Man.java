@@ -1,5 +1,6 @@
 package az.edu.turing.MyApps.HappyFamily;
 
+import java.text.ParseException;
 import java.util.Map;
 
 public final class Man extends Human {
@@ -9,8 +10,8 @@ public final class Man extends Human {
         super(name, surname, year);
     }
 
-    public Man(String name, String surname, int year, int iq) {
-        super(name, surname, year, iq);
+    public Man(String name, String surname, String birthDateStr, int iq) throws ParseException {
+        super(name, surname, birthDateStr, iq);
     }
 
     public Man(String name, String surname, int year, int iq, Map<DayofWeek, String> schedule, Family family) {

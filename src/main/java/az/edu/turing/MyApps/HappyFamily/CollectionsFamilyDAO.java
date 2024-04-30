@@ -91,7 +91,7 @@ public class CollectionsFamilyDAO implements FamilyDAO{
 
     @Override
     public Family adoptChild(Family family, Human child) {
-        if(family.countFamily() >= 5){
+        if (family.countFamily() >= 5) {
             throw new FamilyOverFlowException("Family size exceeded!");
         }
         family.addChild(child);
