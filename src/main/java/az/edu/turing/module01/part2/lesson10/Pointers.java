@@ -5,6 +5,7 @@ public class Pointers {
         String a = "kenan", b = "ferid";
 
 
+        System.out.println("Fuck");
 
 
 
