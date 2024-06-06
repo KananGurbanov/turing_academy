@@ -6,12 +6,6 @@ import java.util.function.Function;
 public class LambdaExpressionApp {
     public static void main(String[] args) {
         MyInterface myInterface = ()-> System.out.println("Hello");
-
         myInterface.sayHello();
-
-
-
-
-
     }
 }
