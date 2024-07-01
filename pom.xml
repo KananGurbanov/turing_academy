@@ -19,6 +19,16 @@
             <artifactId>postgresql</artifactId>
             <version>42.2.20</version> <!-- Check for the latest version -->
         </dependency>
+        <dependency>
+            <groupId>org.eclipse.jetty</groupId>
+            <artifactId>jetty-server</artifactId>
+            <version>9.4.28.v20200408</version>
+        </dependency>
+        <dependency>
+            <groupId>org.eclipse.jetty</groupId>
+            <artifactId>jetty-servlet</artifactId>
+            <version>9.4.28.v20200408</version>
+        </dependency>
     </dependencies>
 
 </project>
