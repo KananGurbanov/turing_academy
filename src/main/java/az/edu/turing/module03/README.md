@@ -1,6 +1,7 @@
 LINKS:
 
 - HTTP METHODS - https://doc.oroinc.com/api/http-methods/
+               - https://chatgpt.com/share/ab89abb1-edff-4b3f-872f-ca4b9676302d 
 
 - IDEMPOTENCY IN POST METHOD - https://medium.com/@saurav200892/how-to-achieve-idempotency-in-post-method-d88d7b08fcdd
                              - https://www.mscharhag.com/api-design/rest-making-post-patch-idempotent
@@ -18,4 +19,3 @@ LINKS:
                                     https://medium.com/jpa-java-persistence-api-guide/optimizing-hibernate-and-spring-data-jpa-with-dynamicinsert-and-dynamicupdate-2677d92c5f10
 
 
-- 

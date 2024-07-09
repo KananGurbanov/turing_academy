@@ -102,7 +102,6 @@ public class LinkedList <T> {
     }
     void addHead(T data){
         this.head = new Node<>(data, this.head);
-
     }
 
     void deleteIndex(int index){
