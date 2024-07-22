@@ -13,9 +13,14 @@ LINKS:
 
 - JPA, Hibernate and Spring Data Jpa - https://medium.com/@burakkocakeu/jpa-hibernate-and-spring-data-jpa-efa71feb82ac
 
-- MAPPED SUPERCLASS - https://youtu.be/eq7WCvXqUfE?si=weXxka8OACawJTrT
+- MAPPED SUPERCLASS AND SUPERBUILDER - https://chatgpt.com/share/3840de43-479b-4580-9682-2b49243bbe66
 
-- DYNAMIC INSERT & DYNAMIC UPDATE - https://youtu.be/K48J7Ogxazc?si=qFw-xRZ6IFb0GULu
+- DYNAMIC INSERT & DYNAMIC UPDATE - https://chatgpt.com/share/9237d759-dba5-45b3-b0c4-86ea1ba3d9c6
                                     https://medium.com/jpa-java-persistence-api-guide/optimizing-hibernate-and-spring-data-jpa-with-dynamicinsert-and-dynamicupdate-2677d92c5f10
 
+- @Transactional - https://chatgpt.com/share/3261add5-f7db-46df-8b04-95ce7ed745e2
+
+- Try (vavr) - https://chatgpt.com/share/bd1e7800-bfd6-42b9-a247-b271baeaafc6
+
+- 
 
