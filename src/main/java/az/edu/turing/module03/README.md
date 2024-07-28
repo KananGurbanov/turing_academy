@@ -1,4 +1,4 @@
-LINKS:
+_LINKS:_
 
 - HTTP METHODS - https://doc.oroinc.com/api/http-methods/
                - https://chatgpt.com/share/ab89abb1-edff-4b3f-872f-ca4b9676302d 
@@ -21,6 +21,4 @@ LINKS:
 - @Transactional - https://chatgpt.com/share/3261add5-f7db-46df-8b04-95ce7ed745e2
 
 - Try (vavr) - https://chatgpt.com/share/bd1e7800-bfd6-42b9-a247-b271baeaafc6
-
-- 
 
