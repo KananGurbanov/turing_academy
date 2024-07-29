@@ -9,7 +9,7 @@ _LINKS:_
 - HIBERNATE CASCADE TYPES AND RELATIONS - https://youtu.be/K2Id3WLZWJI?si=T-Avof5DcGIX2MXm
                                           https://youtu.be/CvDS6DltIno?si=-Z8yBpQbI6nRxVX-
 
-- CASCADE TYPES CHATGPT - https://chatgpt.com/share/33b71a05-015d-4fae-936a-ebeb71fb2996
+- CASCADE TYPES AND FETCH TYPES - https://chatgpt.com/share/e08f96a5-6410-41ab-a99b-2c78c7a9c06c
 
 - JPA, Hibernate and Spring Data Jpa - https://medium.com/@burakkocakeu/jpa-hibernate-and-spring-data-jpa-efa71feb82ac
 
@@ -18,7 +18,7 @@ _LINKS:_
 - DYNAMIC INSERT & DYNAMIC UPDATE - https://chatgpt.com/share/9237d759-dba5-45b3-b0c4-86ea1ba3d9c6
                                     https://medium.com/jpa-java-persistence-api-guide/optimizing-hibernate-and-spring-data-jpa-with-dynamicinsert-and-dynamicupdate-2677d92c5f10
 
-- @Transactional - https://chatgpt.com/share/3261add5-f7db-46df-8b04-95ce7ed745e2
+- @Transactional - https://chatgpt.com/share/5db41a0e-0407-4706-8818-4b2d6874e6bd
 
 - Try (vavr) - https://chatgpt.com/share/bd1e7800-bfd6-42b9-a247-b271baeaafc6
 
