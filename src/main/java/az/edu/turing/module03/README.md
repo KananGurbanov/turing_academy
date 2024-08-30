@@ -23,3 +23,5 @@ _LINKS:_
 - Try (vavr) - https://chatgpt.com/share/bd1e7800-bfd6-42b9-a247-b271baeaafc6
 
 - PERFORMANCE ORIENTED SPRING DATA JPA - https://youtu.be/exqfB1WaqIw?si=7r480p7rJkHMj8UN
+
+- LIQUIBASE YAML - https://chatgpt.com/share/6b487e4d-dfdf-477f-a2ad-ce8a639a77f5
