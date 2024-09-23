@@ -1,4 +1,4 @@
-_LINKS:_
+- LINKS:
 
 - HTTP METHODS - https://doc.oroinc.com/api/http-methods/
                - https://chatgpt.com/share/ab89abb1-edff-4b3f-872f-ca4b9676302d 
@@ -25,3 +25,16 @@ _LINKS:_
 - PERFORMANCE ORIENTED SPRING DATA JPA - https://youtu.be/exqfB1WaqIw?si=7r480p7rJkHMj8UN
 
 - LIQUIBASE YAML - https://chatgpt.com/share/6b487e4d-dfdf-477f-a2ad-ce8a639a77f5
+
+- ONE-TO-MANY RELATIONSHIP IN SPRING BOOT (VLAD MIHALCEA) - https://vladmihalcea.com/the-best-way-to-map-a-onetomany-association-with-jpa-and-hibernate/
+                                                  CHATGPT - https://chatgpt.com/share/97296efe-01ad-4601-86cd-b0cfaaa7537b
+
+- ONE-TO-ONE RELATIONSHIP IN SPRING BOOT (VLAD MIHALCEA) - https://vladmihalcea.com/the-best-way-to-map-a-onetoone-relationship-with-jpa-and-hibernate/
+
+- MANY-TO-MANY RELATIONSHIP IN SPRING BOOT (VLAD MIHALCEA) - https://vladmihalcea.com/the-best-way-to-use-the-manytomany-annotation-with-jpa-and-hibernate/
+
+- ORPHAN REMOVAL (VLAD MIHALCEA) - https://vladmihalcea.com/orphanremoval-jpa-hibernate/
+
+- CASCADE TYPES (VLAD MIHALCEA) - https://vladmihalcea.com/a-beginners-guide-to-jpa-and-hibernate-cascade-types/
+
+- N + 1 (VLAD MIHALCEA) - https://vladmihalcea.com/n-plus-1-query-problem/
