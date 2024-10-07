@@ -1,11 +1,16 @@
-package az.edu.turing.module01.lesson6.Collections;
+package az.edu.turing.module01.lesson6.Collections.set;
 
 import java.util.HashSet;
+import java.util.LinkedHashSet;
 import java.util.Set;
+import java.util.TreeSet;
 
 public class SetApp {
     public static void main(String[] args) {
-        Set<Integer> set = new HashSet<>();
+//        Set<Integer> set = new HashSet<>();
+        Set<Integer> set = new LinkedHashSet<>();
+        TreeSet<Integer> objects = new TreeSet<>();
+
 
         set.add(3);
         set.add(null);

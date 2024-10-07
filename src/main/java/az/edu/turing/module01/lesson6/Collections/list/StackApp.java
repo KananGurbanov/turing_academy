@@ -1,4 +1,4 @@
-package az.edu.turing.module01.lesson6.Collections;
+package az.edu.turing.module01.lesson6.Collections.list;
 
 import java.util.Stack;
 
