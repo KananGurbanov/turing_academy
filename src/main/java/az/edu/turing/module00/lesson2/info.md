@@ -4,6 +4,7 @@
 
 - STRING CLASS - https://chatgpt.com/share/66f318d4-3ad8-8009-8409-74c3fedb95fd
 
+- ARRAYS - https://chatgpt.com/share/67038ffd-97b4-8009-b2c7-7b187129984f
 
 - CODING WITH JOHN
   - IMMUTABLE STRINGS - https://youtu.be/Bj9Mx_Lx3q4?si=w7qa_NmRqsi800wp
