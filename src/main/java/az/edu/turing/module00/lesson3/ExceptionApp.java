@@ -52,26 +52,15 @@ public class ExceptionApp {
             //e.printStackTrace();
         }
 
-
-
-
-
-
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException, NullPointerException {
         File file = new File("src/main/java/az/edu/turing/module01/part2/lesson1/resource");
 
-        try{
+
             FileWriter fw = new FileWriter(file);
             fw.write(14);
-        }catch (IOException e){
-            System.out.println("Duzgun yaz");
 
-            System.out.println(e.getMessage());
-
-            e.printStackTrace();
-        }
 
 
     }

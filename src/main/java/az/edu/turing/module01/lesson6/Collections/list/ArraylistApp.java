@@ -1,6 +1,7 @@
 package az.edu.turing.module01.lesson6.Collections.list;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class ArraylistApp {
 

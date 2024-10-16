@@ -1,0 +1,2 @@
+- PRIORITY QUEUE - https://www.geeksforgeeks.org/priority-queue-class-in-java/
+- DEQUE - https://chatgpt.com/share/67081444-0d8c-8009-ac6e-dadf5cd73c41

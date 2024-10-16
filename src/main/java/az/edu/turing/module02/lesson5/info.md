@@ -7,3 +7,5 @@
 
 - BARE METAL / VMs / CONTAINERS (D0CKER) - https://youtu.be/Jz8Gs4UHTO8?si=K8q4pgOCpJIT_gIM
 
+- RUNNING DATABASE CONTAINERS (POSTGRES, MYSQL, ORACLE) - https://chatgpt.com/share/670e3e34-02f0-8005-9f1b-3a3e60d53010
+

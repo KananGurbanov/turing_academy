@@ -1,6 +1,6 @@
 package az.edu.turing.module01.lesson6.Collections.set;
 
-import java.util.HashSet;
+import java.util.EnumSet;
 import java.util.LinkedHashSet;
 import java.util.Set;
 import java.util.TreeSet;

@@ -1,0 +1,2 @@
+- HASHMAP - https://www.geeksforgeeks.org/java-util-hashmap-in-java-with-examples/
+- MAP INTERFACE - https://chatgpt.com/share/670befd0-66e0-8009-a697-a045dfa5bc88
