@@ -1,4 +1,4 @@
-package az.edu.turing.module1.lesson6.Collections.set;
+package az.edu.turing.module1.lesson6.DataStructures.set;
 
 import java.util.LinkedHashSet;
 import java.util.Set;

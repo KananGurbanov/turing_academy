@@ -1,4 +1,4 @@
-package az.edu.turing.module1.lesson6.Collections.list;
+package az.edu.turing.module1.lesson6.DataStructures.list;
 
 import java.util.Stack;
 

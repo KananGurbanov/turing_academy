@@ -1,4 +1,4 @@
-package az.edu.turing.module1.lesson6.Collections.queue;
+package az.edu.turing.module1.lesson6.DataStructures.queue;
 
 public class LinkedListApp {
     public static void main(String[] args) {

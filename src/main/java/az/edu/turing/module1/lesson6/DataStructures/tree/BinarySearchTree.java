@@ -1,4 +1,4 @@
-package az.edu.turing.module1.lesson6.Collections.tree;
+package az.edu.turing.module1.lesson6.DataStructures.tree;
 
 class Node {
     int value;
