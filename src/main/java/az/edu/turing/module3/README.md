@@ -1,5 +1,12 @@
 - LINKS:
 
+- JWT - https://chatgpt.com/share/6714bd7c-d8f0-8009-a88f-37b72143728f
+        https://fusionauth.io/articles/tokens/jwt-components-explained
+        https://youtu.be/P2CPd9ynFLg?si=gdhAopHosZRiSYYM
+
+- JWT BASED AUTHENTICATION - https://chatgpt.com/share/6714c267-42a8-8009-8ca9-218b4b7acc0d
+                             https://youtu.be/fyTxwIa-1U0?si=D8f6B1rsZLbKbnK9
+
 - HTTP METHODS - https://doc.oroinc.com/api/http-methods/
                - https://chatgpt.com/share/ab89abb1-edff-4b3f-872f-ca4b9676302d 
 

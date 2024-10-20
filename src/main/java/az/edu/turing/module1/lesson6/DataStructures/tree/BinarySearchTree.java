@@ -2,11 +2,11 @@ package az.edu.turing.module1.lesson6.DataStructures.tree;
 
 class Node {
     int value;
-    Node left, right, parent;
+    Node left, right;
 
     public Node(int item) {
         value = item;
-        left = right = parent = null;
+        left = right = null;
     }
 }
 
@@ -18,20 +18,19 @@ class BinarySearchTree {
     }
 
     void insert(int value) {
-        root = insertRec(root, value, null);
+        root = insertRec(root, value);
     }
 
-    Node insertRec(Node root, int value, Node parent) {
+    Node insertRec(Node root, int value) {
         if (root == null) {
-            Node newNode = new Node(value);
-            newNode.parent = parent;
-            return newNode;
+            root = new Node(value);
+            return root;
         }
 
         if (value < root.value) {
-            root.left = insertRec(root.left, value, root);
+            root.left = insertRec(root.left, value);
         } else if (value > root.value) {
-            root.right = insertRec(root.right, value, root);
+            root.right = insertRec(root.right, value);
         }
 
         return root;
@@ -48,6 +47,31 @@ class BinarySearchTree {
             inOrderRec(root.right);
         }
     }
+
+    void postOrder() {
+        postOrderRec(root);
+    }
+
+    void postOrderRec(Node root) {
+        if (root != null) {
+            inOrderRec(root.left);
+            inOrderRec(root.right);
+            System.out.print(root.value + " ");
+        }
+    }
+
+    void preOrder() {
+        preOrderRec(root);
+    }
+
+    void preOrderRec(Node root) {
+        if (root != null) {
+            System.out.print(root.value + " ");
+            inOrderRec(root.left);
+            inOrderRec(root.right);
+        }
+    }
+
 
     boolean search(int value) {
         return searchRec(root, value);
@@ -94,46 +118,5 @@ class BinarySearchTree {
     int findMaxValue() {
         if (root == null) throw new IllegalStateException("Tree is empty");
         return findMax(root).value;
-    }
-
-    // Method to find the predecessor (previous node) of a given node
-    Node previous(Node node) {
-        if (node.left != null) {
-            return findMax(node.left);
-        }
-
-        Node parent = node.parent;
-        while (parent != null && node == parent.left) {
-            node = parent;
-            parent = parent.parent;
-        }
-        return parent;
-    }
-
-    // Method to find the successor (next node) of a given node
-    Node next(Node node) {
-        if (node.right != null) {
-            return findMin(node.right);
-        }
-
-        Node parent = node.parent;
-        while (parent != null && node == parent.right) {
-            node = parent;
-            parent = parent.parent;
-        }
-        return parent;
-    }
-
-    // Method to find a node by value (for testing previous/next)
-    Node findNode(Node root, int value) {
-        if (root == null || root.value == value) {
-            return root;
-        }
-
-        if (value < root.value) {
-            return findNode(root.left, value);
-        } else {
-            return findNode(root.right, value);
-        }
     }
 }
