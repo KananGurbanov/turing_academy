@@ -1,4 +1,4 @@
-package az.edu.turing.module0.lesson12;
+package az.edu.turing.module0.lesson6;
 
 import java.util.Random;
 
