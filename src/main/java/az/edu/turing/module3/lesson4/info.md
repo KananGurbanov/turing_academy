@@ -1,3 +1,6 @@
+
+//--------------------------------SPRING BOOT--------------------------------------
+
 - @SpringBootApplication
     - @EnableAutoConfiguration
     - @SpringBootConfiguration
@@ -19,4 +22,38 @@
 - Spring Boot AutoConfiguration - https://chatgpt.com/share/9a2395f7-5f98-42a1-9e99-8e826fe7bc99
 
 
+// -------------------------------GRADLE-------------------------------------- 
 
+- gradlew build in windows and linux/mac
+- java plugin
+- build command output
+- build task graph
+- when to (not to) use gradlew build
+- gradlew build vs gradlew assemble
+     - https://tomgregory.com/gradle/gradle-build-command/
+
+  
+- task dependencies
+- gradle task graph (tasks performing action and aggregate tasks)
+     - https://tomgregory.com/gradle/all-about-the-gradle-task-graph/
+
+
+- gradle wrapper
+- adding gradle wrapper to a project ("gradle wrapper" command)
+- gradle storage using gradlew wrapper 
+     - https://tomgregory.com/gradle/what-is-the-gradle-wrapper-and-why-should-you-use-it/
+
+  
+- gradle vs. gradlew - https://tomgregory.com/gradle/gradle-vs-gradlew-difference/
+
+- build.gradle - https://tomgregory.com/gradle/anatomy-of-a-gradle-build-script/
+
+- maven build lifecycle - https://www.geeksforgeeks.org/maven-build-lifecycle/
+
+- Where is Spring Boot - https://chatgpt.com/share/674d5145-da60-8009-a829-840ae31022ee
+
+- Spring Boot build and execution, shutdown process - https://chatgpt.com/share/6749ce00-06f0-8009-b4e4-7a08cc5724ac
+                                                    - https://chatgpt.com/share/6748a4e7-e1ec-8009-9fad-76c57d12b91a
+                                                    
+
+- gradlew build, classpath, spring boot jar running - https://chatgpt.com/share/67431ab2-5d44-8009-be07-212d5f96633f

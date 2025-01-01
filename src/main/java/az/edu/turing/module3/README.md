@@ -4,8 +4,8 @@
         https://fusionauth.io/articles/tokens/jwt-components-explained
         https://youtu.be/P2CPd9ynFLg?si=gdhAopHosZRiSYYM
 
-- JWT BASED AUTHENTICATION - https://chatgpt.com/share/6714c267-42a8-8009-8ca9-218b4b7acc0d
-                             https://youtu.be/fyTxwIa-1U0?si=D8f6B1rsZLbKbnK9
+- JWT BASED AUTHENTICATION - https://youtu.be/fyTxwIa-1U0?si=D8f6B1rsZLbKbnK9
+                           - https://chatgpt.com/share/674ac054-93ec-8009-8f3f-17ef77a257af
 
 - HTTP METHODS - https://doc.oroinc.com/api/http-methods/
                - https://chatgpt.com/share/ab89abb1-edff-4b3f-872f-ca4b9676302d 
@@ -45,3 +45,5 @@
 - CASCADE TYPES (VLAD MIHALCEA) - https://vladmihalcea.com/a-beginners-guide-to-jpa-and-hibernate-cascade-types/
 
 - N + 1 (VLAD MIHALCEA) - https://vladmihalcea.com/n-plus-1-query-problem/
+
+- FORWARD VS REVERSE PROXY - https://chatgpt.com/share/67420642-cd70-8009-b7c2-a4c3eb69b07a
