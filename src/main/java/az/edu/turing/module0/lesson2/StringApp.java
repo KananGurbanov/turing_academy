@@ -19,15 +19,13 @@ public class StringApp {
         int first = array[0];
         int second = array[0];
 
-        for(int i=0; i<array.length; i++){
+        for (int j : array) {
 
-            if(array[i] > first) {
+            if (j > first) {
                 second = first;
-                first = array[i];
-            }
-
-            else if (array[i] > second && array[i] != first) {
-                second = array[i];
+                first = j;
+            } else if (j > second && j != first) {
+                second = j;
             }
         }
 
