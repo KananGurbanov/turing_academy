@@ -1,6 +1,6 @@
-package az.edu.turing.module0.multithreading;
+package az.edu.turing.module0.multithreading.basic;
 
-public class MyRunnable implements Runnable{
+public class MyRunnabl implements Runnable{
     @Override
     public void run() {
         System.out.println("My runnable started");
@@ -13,7 +13,7 @@ public class MyRunnable implements Runnable{
     }
 
     public static void main(String[] args) {
-        Thread thread = new Thread(new MyRunnable());
+        Thread thread = new Thread(new MyRunnabl());
         thread.start();
     }
 }

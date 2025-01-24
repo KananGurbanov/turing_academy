@@ -1,4 +1,4 @@
-package az.edu.turing.module0.multithreading;
+package az.edu.turing.module0.multithreading.basic;
 
 public class MyRunnableLambda {
     public static void main(String[] args) throws InterruptedException {

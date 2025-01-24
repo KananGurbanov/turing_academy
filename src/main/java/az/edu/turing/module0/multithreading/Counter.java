@@ -2,9 +2,9 @@ package az.edu.turing.module0.multithreading;
 
 public class Counter {
 
-    private volatile int value = 0;
+    private int value;
 
-    public void increment() {
+    public synchronized void increment() {
         value++;
     }
 
@@ -13,32 +13,52 @@ public class Counter {
     }
 }
 
-
-class MyThreadNew extends Thread {
-
-    private final Counter counter;
-
-    public MyThreadNew(Counter counter) {
-        this.counter = counter;
-    }
+class MyRunnable2 implements Runnable {
+    private int counter;
 
     @Override
     public void run() {
-        counter.increment();
+        System.out.println("Task started");
+        for (int i = 0; i < 10; i++) {
+            this.counter++;
+        }
+        System.out.println(Thread.currentThread().getName() + " " + this.counter);
+        System.out.println("Task finished");
+    }
+}
+
+class MyRunnable implements Runnable {
+
+    private int counter;
+
+    @Override
+    public void run() {
+        System.out.println("Task started");
+        for (int i = 0; i < 10; i++) {
+            synchronized (this) {
+                this.counter++;
+            }
+
+        }
+        System.out.println(Thread.currentThread().getName() + " " + this.counter);
+        System.out.println("Task finished");
     }
 
     public static void main(String[] args) throws InterruptedException {
-        Counter counter = new Counter();
 
-        MyThreadNew thread1 = new MyThreadNew(counter);
-        MyThreadNew thread2 = new MyThreadNew(counter);
+        MyRunnable thread1 = new MyRunnable();
+//        MyRunnable thread2 = new MyRunnable();
 
-        thread1.start(); // start the first thread
-//        thread1.join();  // wait for the first thread
+        Thread thread3 = new Thread(thread1);
+        Thread thread4 = new Thread(thread1);
 
-        thread2.start(); // start the second thread
+        thread3.start(); // start the first thread
+
+        thread4.start();
+//                thread1.join();  // wait for the first thread
+// start the second thread
 //        thread2.join();  // wait for the second thread
 
-        System.out.println(counter.getValue()); // it prints 2
+//        System.out.println(counter.getValue()); // it prints 2
     }
 }
