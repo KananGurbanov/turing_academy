@@ -47,3 +47,9 @@
 - N + 1 (VLAD MIHALCEA) - https://vladmihalcea.com/n-plus-1-query-problem/
 
 - FORWARD VS REVERSE PROXY - https://chatgpt.com/share/67420642-cd70-8009-b7c2-a4c3eb69b07a
+
+
+- CORS - https://www.baeldung.com/cs/cors-preflight-requests
+       - https://chatgpt.com/share/67b1d289-5d04-8009-851e-a1244692c63c
+
+- 
