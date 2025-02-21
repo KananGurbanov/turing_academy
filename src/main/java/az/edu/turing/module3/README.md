@@ -51,5 +51,3 @@
 
 - CORS - https://www.baeldung.com/cs/cors-preflight-requests
        - https://chatgpt.com/share/67b1d289-5d04-8009-851e-a1244692c63c
-
-- 
