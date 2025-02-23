@@ -49,5 +49,9 @@
 - FORWARD VS REVERSE PROXY - https://chatgpt.com/share/67420642-cd70-8009-b7c2-a4c3eb69b07a
 
 
-- CORS - https://www.baeldung.com/cs/cors-preflight-requests
-       - https://chatgpt.com/share/67b1d289-5d04-8009-851e-a1244692c63c
+- CORS - https://chatgpt.com/share/67b1d289-5d04-8009-851e-a1244692c63c
+       - https://www.baeldung.com/cs/cors-preflight-requests
+       
+
+- SOP - https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin_policy
+- CORS - https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS#the_http_response_headers
