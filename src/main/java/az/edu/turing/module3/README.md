@@ -55,3 +55,5 @@
 
 - SOP - https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin_policy
 - CORS - https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS#the_http_response_headers
+
+- CORS AND CSRF - https://maddevs.io/blog/web-security-an-overview-of-sop-cors-and-csrf/
