@@ -1,4 +1,5 @@
 - JAVA MEMORY MANAGEMENT (GARBAGE COLLECTION) - https://www.geeksforgeeks.org/java-memory-management/
+                                                https://chatgpt.com/share/67c5ebc6-7b7c-8005-9b0c-031bb1d256e6
                                                 https://chatgpt.com/share/66f3175b-b3c8-8009-b081-468db16ecad8
                                                 https://chatgpt.com/share/66f6e796-940c-8009-874d-78b619040171
 
